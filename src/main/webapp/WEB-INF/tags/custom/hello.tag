@@ -1,3 +1,5 @@
+<%@ attribute name="a" type="java.lang.Integer" %>
+
 aaaaaaaaaaaaaaaaaa
 </br>
 aaaaaaaaaaaaaaaaaaaaaa
@@ -7,3 +9,5 @@ aaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaa
 </br>
 aaaaaaaaaaaaaaaaaaaaaa
+
+${a}

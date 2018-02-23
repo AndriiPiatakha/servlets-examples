@@ -16,7 +16,9 @@
 		Date=<%=new Date()%>
 	</h3>
 	
-	<custom:hello/>
+	<custom:hello a="111"/>
+	
+	
 	
 	
 	

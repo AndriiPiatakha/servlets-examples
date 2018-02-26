@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="custom" tagdir="/WEB-INF/tags/custom"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix = "ex" uri = "WEB-INF/custom.tld"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -13,6 +14,8 @@
 	<custom:printArray coll="${array}" />
 	<br />
 	<c:out value="${null}" default="default" escapeXml="false"></c:out>
+	<br />
+	<ex:Hello message="message" coll="${array }"/>
 	<br />
 
 	<%-- scopes: page, request, session. application --%>
@@ -82,6 +85,8 @@
 	url is = ${myURL }
 	<br />
 	<c:import url="${myURL}" />
+	
+	
 
 </body>
 </html>

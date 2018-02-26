@@ -1,0 +1,19 @@
+<taglib>
+   <tlib-version>1.0</tlib-version>
+   <jsp-version>2.0</jsp-version>
+   <short-name>Example TLD</short-name>
+   
+   <tag>
+      <name>Hello</name>
+      <tag-class>tags.HelloTag</tag-class>
+      <body-content>empty</body-content>
+      <attribute>
+         <name>message</name>
+      </attribute>
+      <attribute>
+         <name>coll</name>
+         <type>java.util.Collection</type>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+   </tag>
+</taglib>

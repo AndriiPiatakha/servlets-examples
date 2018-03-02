@@ -1,7 +1,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
 
-<%@ attribute name="coll" type="java.util.Collection" %>
+<%@ attribute name="coll" type="java.util.Collection" required="true"%>
 
+<table>
 <c:forEach items="${coll}" var="item">
-	<c:out value="${item}"></c:out>
+	<tr>
+		<td>
+			${item}
+		</td>
+	</tr>
 </c:forEach>
+</table>

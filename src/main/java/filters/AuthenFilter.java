@@ -28,6 +28,11 @@ public class AuthenFilter implements Filter {
 
 		// Pass request back down the filter chain
 		chain.doFilter(request, response);
+		
+		// Smth what should be done sending request back
+		System.out.println("exiting filter");
+		
+		
 	}
 
 	public void destroy() {

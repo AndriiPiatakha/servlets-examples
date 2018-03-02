@@ -19,6 +19,8 @@ public class HelloForm extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("In servlet");
+		
 		// Set response content type
 		response.setContentType("text/html");
 

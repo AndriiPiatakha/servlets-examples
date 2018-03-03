@@ -9,6 +9,8 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <!-- SERVLETS -->
   <servlet>
     <servlet-name>first</servlet-name>
     <servlet-class>servlets.FirstServlet</servlet-class>
@@ -17,18 +19,23 @@
       <param-value>value</param-value>
     </init-param>
   </servlet>
+    <servlet>
+    <servlet-name>ErrorHandler</servlet-name>
+    <servlet-class>errorshandlers.ErrorHandler</servlet-class>
+  </servlet>
+  
+  <!-- MAPPING -->
   <servlet-mapping>
     <servlet-name>first</servlet-name>
     <url-pattern>/first</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <servlet-name>ErrorHandler</servlet-name>
-    <servlet-class>errorshandlers.ErrorHandler</servlet-class>
-  </servlet>
+
   <servlet-mapping>
     <servlet-name>ErrorHandler</servlet-name>
     <url-pattern>/ErrorHandler</url-pattern>
   </servlet-mapping>
+  
+  <!-- FILTERS -->
   <filter>
     <filter-name>LogFilter</filter-name>
     <filter-class>filters.LogFilter</filter-class>
@@ -45,6 +52,8 @@
       <param-value>Initialization Paramter</param-value>
     </init-param>
   </filter>
+  
+  <!-- FILTER MAPPING -->
   <filter-mapping>
     <filter-name>LogFilter</filter-name>
     <url-pattern>/*</url-pattern>
@@ -53,6 +62,8 @@
     <filter-name>AuthenFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+  
+  <!-- ERROR HANDLING -->
   <error-page>
     <error-code>404</error-code>
     <location>/ErrorHandler</location>
@@ -71,6 +82,8 @@
     <exception-type>java.io.IOException</exception-type>
     <location>/ErrorHandler</location>
   </error-page>
+  
+  <!-- SESSION config -->
   <session-config>
     <session-timeout>15</session-timeout>
   </session-config>

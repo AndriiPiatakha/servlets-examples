@@ -19,7 +19,7 @@
             document.write("Hello World!");
       </script>
       
-      <input type="button" value="asd" onclick="some3()"/>
+      <input type="button" value="asd" onclick="some30()"/>
 
 </body>
 </html>

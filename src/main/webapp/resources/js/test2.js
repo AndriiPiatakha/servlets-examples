@@ -4,6 +4,6 @@ function some2() {
 	alert('some');
 }
 
-function some3() {
-	alert('some3');
+function some30() {
+	alert('some30');
 }

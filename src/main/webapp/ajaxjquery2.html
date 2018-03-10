@@ -6,12 +6,16 @@
 	$(document).ready(function() {
 		$("button").click(function() {
 			$.ajax({
-				url : 'GetUserServlet',
+				url : 'GetUserServlet1',
 				data : {
 					userName : $('#userName').val()
 				},
+				method: 'GET',
 				success : function(result) {
 					$("#ajaxGetUserServletResponse").html(result);
+				},
+				error: function(smth) {
+					alert("test")
 				}
 			});
 		});

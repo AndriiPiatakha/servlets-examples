@@ -244,7 +244,7 @@
 		
 		// METHODS
 		
-//		document.getElementById(id)	Find an element by element id
+//		var element = document.getElementById(id)	Find an element by element id
 //		document.getElementsByTagName(name)	Find elements by tag name
 //		document.getElementsByClassName(name)	Find elements by class name
 //		document.querySelectorAll("p.intro");

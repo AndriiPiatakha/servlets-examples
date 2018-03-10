@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	
+</script>
+</head>
+<body>
+
+	<script type="text/javascript">
+		//$(selector).action()
+		//
+		//	A $ sign to define/access jQuery
+		//	A (selector) to "query (or find)" HTML elements
+		//	A jQuery action() to be performed on the element(s)
+		//	Examples:
+		//
+		//	$(this).hide() - hides the current element.
+		//
+		//	$("p").hide() - hides all <p> elements.
+		//
+		//	$(".test").hide() - hides all elements with class="test".
+		//
+		//	$("#test").hide() - hides the element with id="test".
+
+		$(document).ready(function() {
+
+			// jQuery methods go here...
+
+		});
+
+		$(function() {
+
+			// jQuery methods go here...
+
+		});
+
+		// SELECTORS
+
+		//		$("*")	Selects all elements	
+		//		$(this)	Selects the current HTML element	
+		//		$("p.intro")	Selects all <p> elements with class="intro"	
+		//		$("p:first")	Selects the first <p> element	
+		//		$("ul li:first")	Selects the first <li> element of the first <ul>	
+		//		$("ul li:first-child")	Selects the first <li> element of every <ul>	
+		//		$("[href]")	Selects all elements with an href attribute	
+		//		$("a[target='_blank']")	Selects all <a> elements with a target attribute value equal to "_blank"	
+		//		$("a[target!='_blank']")	Selects all <a> elements with a target attribute value NOT equal to "_blank"	
+		//		$(":button")	Selects all <button> elements and <input> elements of type="button"	
+		//		$("tr:even")	Selects all even <tr> elements	
+		//		$("tr:odd")	Selects all odd <tr> elements
+
+		//EVENTS
+
+		//	Mouse Events	Keyboard Events	Form Events	Document/Window Events
+		//	click	keypress	submit	load
+		//	dblclick	keydown	change	resize
+		//	mouseenter	keyup	focus	scroll
+		//	mouseleave	 	blur	unload
+
+		$("p").click(function() {
+			$(this).hide();
+		});
+
+		$("p").on("click", function() {
+			$(this).hide();
+		});
+
+		$("p").on({
+			mouseenter : function() {
+				$(this).css("background-color", "lightgray");
+			},
+			mouseleave : function() {
+				$(this).css("background-color", "lightblue");
+			},
+			click : function() {
+				$(this).css("background-color", "yellow");
+			}
+		});
+
+		// HIDE AND SHOW EXAMPLES
+
+		$("button").click(function() {
+			$("p").toggle();
+		});
+		
+		
+	</script>
+
+</body>
+</html>

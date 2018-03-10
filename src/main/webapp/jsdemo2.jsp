@@ -3,6 +3,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<script type="text/javascript">
+ // you may here
+</script>
+
+<script src="" type="text/javascript"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
@@ -93,6 +98,7 @@
 		obj = JSON.parse(text);
 		
 		
+		
 		var myObj, i, j, x = "";
 		myObj = {
 		    "name":"John",
@@ -104,6 +110,7 @@
 		    ]
 		}
 
+		/* for (i = 0; i < 10; i++) */
 		for (i in myObj.cars) {
 		    x += "<h2>" + myObj.cars[i].name + "</h2>";
 		    for (j in myObj.cars[i].models) {
@@ -191,6 +198,111 @@
 		    return this.firstName + " " + this.lastName;
 		};
 		
+		
+		// FUNCTIONS 
+		//self invoking
+		
+		(function () {
+		    var x = "Hello!!";      // I will invoke myself
+		})();
+		
+		
+		// functions as values
+		
+		function myFunction(a, b) {
+		    return a * b;
+		}
+
+		var x = myFunction(4, 3);
+		
+		// arguments object
+		
+		x = findMax(1, 123, 500, 115, 44, 88);
+
+		function findMax() {
+		    var i;
+		    var max = -Infinity;
+		    for (i = 0; i < arguments.length; i++) {
+		        if (arguments[i] > max) {
+		            max = arguments[i];
+		        }
+		    }
+		    return max;
+		}
+		
+		// DOM
+		
+		//JavaScript can change all the HTML elements in the page
+		//JavaScript can change all the HTML attributes in the page
+		//JavaScript can change all the CSS styles in the page
+		//JavaScript can remove existing HTML elements and attributes
+		//JavaScript can add new HTML elements and attributes
+		//JavaScript can react to all existing HTML events in the page
+		//JavaScript can create new HTML events in the page
+		
+		document.getElementById("demo5").innerHTML = "Hello World!";
+		
+		// METHODS
+		
+//		var element = document.getElementById(id)	Find an element by element id
+//		document.getElementsByTagName(name)	Find elements by tag name
+//		document.getElementsByClassName(name)	Find elements by class name
+//		document.querySelectorAll("p.intro");
+
+//		Changing HTML Elements
+
+//		element.innerHTML =  new html content	Change the inner HTML of an element
+//		element.attribute = new value	Change the attribute value of an HTML element
+//		element.setAttribute(attribute, value)	Change the attribute value of an HTML element
+//		element.style.property = new style	Change the style of an HTML element
+
+//		Adding and Deleting Elements
+
+//		document.createElement(element)	Create an HTML element
+//		document.removeChild(element)	Remove an HTML element
+//		document.appendChild(element)	Add an HTML element
+//		document.replaceChild(element)	Replace an HTML element
+//		document.write(text)	Write into the HTML output stream
+
+		// Cookie
+		
+		document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC";
+		
+		function setCookie(cname, cvalue, exdays) {
+		    var d = new Date();
+		    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		    var expires = "expires="+d.toUTCString();
+		    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+		}
+
+		function getCookie(cname) {
+		    var name = cname + "=";
+		    var ca = document.cookie.split(';');
+		    for(var i = 0; i < ca.length; i++) {
+		        var c = ca[i];
+		        while (c.charAt(0) == ' ') {
+		            c = c.substring(1);
+		        }
+		        if (c.indexOf(name) == 0) {
+		            return c.substring(name.length, c.length);
+		        }
+		    }
+		    return "";
+		}
+
+		function checkCookie() {
+		    var user = getCookie("username");
+		    if (user != "") {
+		        alert("Welcome again " + user);
+		    } else {
+		        user = prompt("Please enter your name:", "");
+		        if (user != "" && user != null) {
+		            setCookie("username", user, 365);
+		        }
+		    }
+		}
+		
+		
 	</script>
 
 	<div id="demo2">test</div>
@@ -204,7 +316,7 @@
 		onclick="document.getElementById('demo').innerHTML = Date()">
 		Click me to display Date and Time.</button>
 
-	<p id="demo"></p>
+	<p id="demo" class="some"></p>
 
 	<noscript>Sorry...JavaScript is needed to go ahead.</noscript>
 

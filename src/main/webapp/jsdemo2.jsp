@@ -98,6 +98,7 @@
 		obj = JSON.parse(text);
 		
 		
+		
 		var myObj, i, j, x = "";
 		myObj = {
 		    "name":"John",
@@ -315,7 +316,7 @@
 		onclick="document.getElementById('demo').innerHTML = Date()">
 		Click me to display Date and Time.</button>
 
-	<p id="demo"></p>
+	<p id="demo" class="some"></p>
 
 	<noscript>Sorry...JavaScript is needed to go ahead.</noscript>
 

@@ -1,0 +1,8 @@
+Mar 14, 2018 12:05:40 PM logging.javalogging.UseLogger doSomeThingAndLog
+SEVERE: Info Log
+Mar 14, 2018 12:05:40 PM logging.javalogging.UseLogger doSomeThingAndLog
+SEVERE: Info Log
+Mar 14, 2018 12:05:40 PM logging.javalogging.UseLogger doSomeThingAndLog
+WARNING: Info Log
+Mar 14, 2018 12:05:40 PM logging.javalogging.UseLogger doSomeThingAndLog
+INFO: Info Log

@@ -92,9 +92,17 @@ public class Log4jLogging {
 //			PatternLayout
 //			SimpleLayout
 //			XMLLayout
-	
-	
-	
+//	
+//	
+//	=========== FILE APPENDER
+//			
+//			immediateFlush	This flag is by default set to true, which means the output stream to the file being flushed with each append operation.
+//			encoding	It is possible to use any character-encoding. By default, it is the platform-specific encoding scheme.
+//			threshold	The threshold level for this appender.
+//			Filename	The name of the log file.
+//			fileAppend	This is by default set to true, which means the logging information being appended to the end of the same file.
+//			bufferedIO	This flag indicates whether we need buffered writing enabled. By default, it is set to false.
+//			bufferSize	If buffered I/O is enabled, it indicates the buffer size. By default, it is set to 8kb.
 	
 	
 	

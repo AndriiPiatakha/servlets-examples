@@ -1,0 +1,4 @@
+2018-03-14-main--DEBUG-logging.log4j.Log4jExample:Hello this is a debug message
+2018-03-14-main--INFO -logging.log4j.Log4jExample:Hello this is an info message
+2018-03-14-main--DEBUG-logging.log4j.Log4jExample:Hello this is a debug message
+2018-03-14-main--INFO -logging.log4j.Log4jExample:Hello this is an info message

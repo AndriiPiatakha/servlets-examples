@@ -14,7 +14,19 @@
 function myFunction() {
    document.getElementById("demo").innerHTML = "Paragraph changed.";
 }
+
+var f = function(a) {
+	alert(a)
+}
+
+var Person = {
+		makeAlert: f
+}
+
+Person.makerAlert(1);
 </script>
+
+<button onclick="f(1)"></button>
 
 </body>
 </html> 

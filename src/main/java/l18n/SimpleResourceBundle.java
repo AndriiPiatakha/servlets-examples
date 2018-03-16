@@ -8,6 +8,7 @@ public class SimpleResourceBundle extends ResourceBundle {
 
 	private String keys = "AMMessage PMMessage";
 
+	@Override
 	public Object handleGetObject(String key) {
 		if (key.equals("AMMessage"))
 			return "Good morning";
@@ -17,6 +18,7 @@ public class SimpleResourceBundle extends ResourceBundle {
 		return null;
 	}
 
+	@Override
 	public Enumeration getKeys() {
 		StringTokenizer keyTokenizer = new StringTokenizer(keys);
 

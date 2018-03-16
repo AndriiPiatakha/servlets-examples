@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
-    $("#btn1").click(function(){
-        $(".some").before("<b>Before</b>");
-    });
+	$(document).ready(function() {
+		$("#btn1").click(function() {
+			$(".some").before("<b>Before</b>");
+		});
 
-    $("#btn2").click(function(){
-        $(".some").after("<i>After</i>");
-    });
-});
+		$("#btn2").click(function() {
+			$(".some").after("<i>After</i>");
+		});
+	});
 </script>
 </head>
 <body>
 
-<div class="some" width="100" height="140"><br><br>
+	<div class="some" width="100" height="140">
+		<br>
+		<br>
 
-<button id="btn1">Insert before</button>
-<button id="btn2">Insert after</button>
-
+		<button id="btn1">Insert before</button>
+		<button id="btn2">Insert after</button>
+	</div>
 </body>
 </html>

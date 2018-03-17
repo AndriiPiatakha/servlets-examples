@@ -2,15 +2,15 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2018-03-14T14:01:30</date>
-  <millis>1521028890541</millis>
+  <date>2018-03-17T17:01:44</date>
+  <millis>1521298904453</millis>
   <sequence>0</sequence>
-  <logger>logging.javalogging.LoggerExample</logger>
+  <logger>logging.javalogging.examples.LoggerExample</logger>
   <level>INFO</level>
-  <class>logging.javalogging.FormatterExample</class>
+  <class>logging.javalogging.examples.FormatterExample</class>
   <method>main</method>
   <thread>1</thread>
   <message>Finnest message: Logger with DEFAULT FORMATTER</message>
 </record>
-Mar 14, 2018 2:01:30 PM logging.javalogging.FormatterExample main
+Mar 17, 2018 5:01:44 PM logging.javalogging.examples.FormatterExample main
 FINEST: Finnest message: Logger with SIMPLE FORMATTER

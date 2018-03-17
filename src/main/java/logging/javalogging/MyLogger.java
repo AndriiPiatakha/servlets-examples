@@ -28,7 +28,7 @@ public class MyLogger {
             rootLogger.removeHandler(handlers[0]);
         }
 
-        logger.setLevel(Level.INFO);
+        logger.setLevel(Level.FINE);
         fileTxt = new FileHandler("Logging.txt");
         fileHTML = new FileHandler("Logging.html");
 

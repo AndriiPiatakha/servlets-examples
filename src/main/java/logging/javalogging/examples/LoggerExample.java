@@ -10,6 +10,7 @@ public class LoggerExample {
 	private static final Logger LOGGER = Logger.getLogger(LoggerExample.class.getName());
 	public static void main(String[] args) throws SecurityException, IOException {
 
+		LOGGER.setLevel(Level.FINE);
 		LOGGER.info("Logger Name: "+LOGGER.getName());
 		
 		LOGGER.warning("Can cause ArrayIndexOutOfBoundsException");

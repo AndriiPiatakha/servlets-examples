@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bookstore>
+
+	<book category="cooking">
+		<title lang="en">Everyday Italian</title>
+		<author>Giada De Laurentiis</author>
+		<year>2005</year>
+		<price>30.00</price>
+	</book>
+
+	<book category="children">
+		<title lang="en">Harry Potter</title>
+		<author>J K. Rowling</author>
+		<year>2005</year>
+		<price>29.99</price>
+	</book>
+
+	<book category="web">
+		<title lang="en">XQuery Kick Start</title>
+		<author>James McGovern</author>
+		<author>Per Bothner</author>
+		<author>Kurt Cagle</author>
+		<author>James Linn</author>
+		<author>Vaidyanathan Nagarajan</author>
+		<year>2003</year>
+		<price>49.99</price>
+	</book>
+
+	<book category="web">
+		<title lang="en">Learning XML</title>
+		<author>Erik T. Ray</author>
+		<year>2003</year>
+		<price>39.95</price>
+	</book>
+
+</bookstore> 
+
+<!-- 
+
+Expression 	Description
+nodename 	Selects all nodes with the name "nodename"
+/ 			Selects from the root node
+// 			Selects nodes in the document from the current node that match the selection no matter where they are
+. 			Selects the current node
+.. 			Selects the parent of the current node
+@ 			Selects attributes
+
+
+XPath Expression 					Result
+/bookstore/book[1] 					Selects the first book element that is the child of the bookstore element
+/bookstore/book[last()] 			Selects the last book element that is the child of the bookstore element
+/bookstore/book[last()-1] 			Selects the last but one book element that is the child of the bookstore element
+/bookstore/book[position()<3] 		Selects the first two book elements that are children of the bookstore element
+//title[@lang] 						Selects all the title elements that have an attribute named lang
+//title[@lang='en'] 				Selects all the title elements that have a "lang" attribute with a value of "en"
+/bookstore/book[price>35.00] 		Selects all the book elements of the bookstore element that have a price element with a value greater than 35.00
+/bookstore/book[price>35.00]/title 	Selects all the title elements of the book elements of the bookstore element that have a price element with a value greater than 35.00
+ -->

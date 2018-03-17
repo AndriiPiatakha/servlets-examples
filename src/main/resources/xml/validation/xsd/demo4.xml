@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+
+<note
+	xmlns="https://www.w3schools.com"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://www.w3schools.com note.xsd">
+	
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+ 
+</note> 
+
+<!-- 
+
+    xs:string
+    xs:decimal
+    xs:integer
+    xs:boolean
+    xs:date
+    xs:time
+
+
+<xs:simpleType name="LetterType">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[a-zA-Z]" />
+    </xs:restriction>
+</xs:simpleType>
+
+
+
+<xs:complexType name="AddressType">
+    <xs:sequence>
+        <xs:element name="Line1" type="xs:string" />
+        <xs:element name="Line2" type="xs:string" minOccurs="0" />
+    </xs:sequence>
+</xs:complexType>
+<xs:complexType name="InternalAddressType">
+    <xs:complexContent>
+        <xs:restriction base="AddressType">
+            <xs:sequence>
+                <xs:element name="Line1" type="xs:string" />
+            </xs:sequence>
+        </xs:restriction>
+    </xs:complexContent>
+</xs:complexType>
+
+
+<xs:element name="color" type="xs:string" default="red"/> 
+
+<xs:element name="color" type="xs:string" fixed="red"/> 
+
+
+================ RESTRICTIONS ============
+
+
+<xs:element name="age">
+  <xs:simpleType>
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="120"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element> 
+
+
+<xs:element name="car">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Audi"/>
+      <xs:enumeration value="Golf"/>
+      <xs:enumeration value="BMW"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element> 
+
+
+<xs:element name="car" type="carType"/>
+
+<xs:simpleType name="carType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Audi"/>
+    <xs:enumeration value="Golf"/>
+    <xs:enumeration value="BMW"/>
+  </xs:restriction>
+</xs:simpleType> 
+
+
+<xs:element name="initials">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z][a-zA-Z][a-zA-Z]"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element> 
+
+
+<xs:element name="password">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="5"/>
+      <xs:maxLength value="8"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element> 
+
+ -->

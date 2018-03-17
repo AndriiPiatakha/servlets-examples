@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE note [
+<!ELEMENT note (to,from,heading,body)>
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+]>
+<note>
+	<to>Tove</to>
+	<from>Jani</from>
+	<heading>Reminder</heading>
+	<body>Don't forget me this weekend</body>
+</note> 
+
+<!-- 
+
+
+PCDATA - Parsed Character Data
+
+XML parsers normally parse all the text in an XML document.
+
+CDATA - (Unparsed) Character Data
+
+The term CDATA is used about text data that should not be parsed by the XML parser.
+
+Characters like "<" and "&" are illegal in XML elements.
+
+
+
+    !DOCTYPE note defines that the root element of this document is note
+    !ELEMENT note defines that the note element must contain four elements: "to,from,heading,body"
+    !ELEMENT to defines the to element to be of type "#PCDATA"
+    !ELEMENT from defines the from element to be of type "#PCDATA"
+    !ELEMENT heading defines the heading element to be of type "#PCDATA"
+    !ELEMENT body defines the body element to be of type "#PCDATA"
+
+
+from a DTD point of view, all XML documents are made up by the following building blocks:
+
+    Elements
+    Attributes
+    Entities
+    PCDATA
+    CDATA
+
+Entities
+
+Some characters have a special meaning in XML, like the less than sign (<) that defines the start of an XML tag.
+
+ -->

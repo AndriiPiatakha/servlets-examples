@@ -36,7 +36,7 @@ public class XMLValidation {
 			validator.validate(new StreamSource(XMLValidation.class.getClassLoader().getResourceAsStream("xml/validation/java/" + xmlPath)));
 		} catch (IOException | SAXException e) {
 			System.out.println("Exception: " + e.getMessage());
-			return false;
+			return false; 
 		}
 		return true;
 	}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-03-17T16:59:37</date>
+  <millis>1521298777406</millis>
+  <sequence>0</sequence>
+  <logger>logging.javalogging.examples.LoggerExample</logger>
+  <level>CONFIG</level>
+  <class>logging.javalogging.examples.HandlerExample</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Configuration done.</message>
+</record>
+<record>
+  <date>2018-03-17T16:59:37</date>
+  <millis>1521298777450</millis>
+  <sequence>1</sequence>
+  <logger>logging.javalogging.examples.LoggerExample</logger>
+  <level>FINE</level>
+  <class>logging.javalogging.examples.HandlerExample</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Finer logged</message>
+</record>
+<record>
+  <date>2018-03-17T16:59:37</date>
+  <millis>1521298777450</millis>
+  <sequence>2</sequence>
+  <logger>logging.javalogging.examples.LoggerExample</logger>
+  <level>FINER</level>
+  <class>logging.javalogging.examples.HandlerExample</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Finest example on LOGGER handler completed.</message>
+</record>
+</log>

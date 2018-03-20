@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-03-17T17:01:44</date>
+  <millis>1521298904453</millis>
+  <sequence>0</sequence>
+  <logger>logging.javalogging.examples.LoggerExample</logger>
+  <level>INFO</level>
+  <class>logging.javalogging.examples.FormatterExample</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Finnest message: Logger with DEFAULT FORMATTER</message>
+</record>
+Mar 17, 2018 5:01:44 PM logging.javalogging.examples.FormatterExample main
+FINEST: Finnest message: Logger with SIMPLE FORMATTER

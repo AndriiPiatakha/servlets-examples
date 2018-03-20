@@ -1,0 +1,24 @@
+Hello this is a debug message
+Hello this is an info message
+Debug Message!
+Info Message!
+Warn Message!
+Error Message!
+Fatal Message!
+2018-03-14-main--DEBUG-logging.log4j.Log4jExample:Hello this is a debug message
+2018-03-14-main--INFO -logging.log4j.Log4jExample:Hello this is an info message
+2018-03-14-main--DEBUG-logging.log4j.Log4jExample:Hello this is a debug message
+2018-03-14-main--INFO -logging.log4j.Log4jExample:Hello this is an info message
+2018-03-14-main--DEBUG-logging.log4j.Log4jExample:Hello this is a debug message
+2018-03-14-main--INFO -logging.log4j.Log4jExample:Hello this is an info message
+2018-03-14-main--DEBUG-logging.log4j.Log4jExample:Hello this is a debug message
+2018-03-14-main--INFO -logging.log4j.Log4jExample:Hello this is an info message
+2018-03-14-main--DEBUG-logging.log4j.Log4jExample:Hello this is a debug message
+2018-03-14-main--INFO -logging.log4j.Log4jExample:Hello this is an info message
+2018-03-14-main--DEBUG-logging.log4j.Log4jExample:Hello this is a debug message
+2018-03-14-main--INFO -logging.log4j.Log4jExample:Hello this is an info message
+2018-03-14-main--DEBUG-logging.log4j.Log4jExample:Hello this is a debug message
+2018-03-14-main--INFO -logging.log4j.Log4jExample:Hello this is an info message
+2018-03-14-main--DEBUG-logging.log4j.Log4jExample:Hello this is a debug message
+2018-03-14-main--INFO -logging.log4j.Log4jExample:Hello this is an info message
+2018-03-14-main--INFO -logging.slf4j.Slf4jLogging:Testing 123

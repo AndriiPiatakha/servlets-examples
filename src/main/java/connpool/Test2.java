@@ -20,11 +20,7 @@ public class Test2 extends HttpServlet {
             System.out.println("HERE");
             Connection con2 = dataSource.getConnection();
 
-            System.out.println(con1 == con2);
             
-            for (int i = 0; i < 10; i++) {
-            	Connection conn= dataSource.getConnection();
-            }
 
         } catch (Exception e) {
             System.err.println(e);

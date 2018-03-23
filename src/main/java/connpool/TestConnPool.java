@@ -15,6 +15,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
+import org.apache.commons.dbcp.BasicDataSource;
+
+import com.mysql.cj.core.io.BaseDecoratingValueFactory;
+
 /**
  * Servlet implementation class TestConnPool
  */
@@ -45,10 +49,12 @@ public class TestConnPool extends HttpServlet {
 			Connection connection = ds.getConnection();
 			System.out.println(connection.hashCode());
 			
+		
+			
 			connection.close();
 			
 			System.out.println(connection);
-			
+
 			
 		} catch (NamingException | SQLException e) {
 			// TODO Auto-generated catch block

@@ -14,14 +14,14 @@ public class DemoDomParser {
 
    public static void main(String[] args) {
 
-      try {
+      try ( InputStream resourceAsStream = DemoDomParser.class.getClassLoader().getResourceAsStream("./xml/toParse/demo.xml");) {
 //         File inputFile = new File("src/main/resources/xml/toParse/demo.xml");
-         InputStream resourceAsStream = DemoDomParser.class.getClassLoader().getResourceAsStream("./xml/toParse/demo.xml");
+        
          DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
          DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 //         Document doc = dBuilder.parse(inputFile);
          Document doc = dBuilder.parse(resourceAsStream);
-         doc.getDocumentElement().normalize();
+//         doc.getDocumentElement().normalize();
          System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
          NodeList nList = doc.getElementsByTagName("student");
          System.out.println("----------------------------");

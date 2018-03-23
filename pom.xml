@@ -15,6 +15,13 @@
 		</dependency>
 
 		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>6.0.6</version>
+		</dependency>
+
+
+		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>2.6</version>
@@ -111,6 +118,7 @@
 					<downloadJavadocs>true</downloadJavadocs>
 				</configuration>
 			</plugin>
+			
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.5.1</version>

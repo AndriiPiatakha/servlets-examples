@@ -1,0 +1,1 @@
+select SUM(groups.amount_students)/2 as total_students FROM groups;

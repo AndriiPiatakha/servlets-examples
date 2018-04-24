@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 
 import org.apache.commons.dbcp.BasicDataSource;
 
-import com.mysql.cj.core.io.BaseDecoratingValueFactory;
+
 
 /**
  * Servlet implementation class TestConnPool

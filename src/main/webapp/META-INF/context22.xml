@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context reloadable="true" privileged="true">
+    <Resource name="connpool" 
+              auth="Container"
+              type="javax.sql.DataSource" 
+              maxActive="1"
+              maxIdle="1" 
+              maxWait="100"
+              username="root"
+              password="root"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/test"/>
+</Context>

@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<root xmlns:h="http://www.w3.org/TR/html4/" xmlns:f="https://www.w3schools.com/furniture">
+<root xmlns:h="http://www.w3.org/TR/html4/" 
+		xmlns:f="https://www.w3schools.com/furniture">
 
 	<!-- ========= NAME CONFLICT ========== -->
-	<!-- <table> <tr> <td>Apples</td> <td>Bananas</td> </tr> </table> <table> 
-		<name>African Coffee Table</name> <width>80</width> <length>120</length> 
-		</table> -->
+	<!--<table>
+		<tr>
+			<td>Apples</td>
+			<td>Bananas</td>
+		</tr>
+	</table>
+	<table>
+		<name>African Coffee Table</name>
+		<width>80</width>
+		<length>120</length>
+	</table> -->
 	<!-- ============== SOLVING NAME CONFLICT =========== -->
 
 	<!-- <h:table> <h:tr> <h:td>Apples</h:td> <h:td>Bananas</h:td> </h:tr> </h:table> 

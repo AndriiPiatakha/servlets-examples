@@ -37,15 +37,15 @@ public class JDBCBatchUpdateExample {
 
 		String insertTableSQL1 = "INSERT INTO DBUSER"
 				+ "(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) " + "VALUES"
-				+ "(101,'mkyong','system', " + "str_to_date('August 10 2017', '%M %d %Y'))";
+				+ "(101,'test1','system', " + "str_to_date('August 10 2017', '%M %d %Y'))";
 
 		String insertTableSQL2 = "INSERT INTO DBUSER"
 				+ "(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) " + "VALUES"
-				+ "(102,'mkyong','system', " + "str_to_date('August 10 2017', '%M %d %Y'))";
+				+ "(102,'test2','system', " + "str_to_date('August 10 2017', '%M %d %Y'))";
 
 		String insertTableSQL3 = "INSERT INTO DBUSER"
 				+ "(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) " + "VALUES"
-				+ "(103,'mkyong','system', " + "str_to_date('August 10 2017', '%M %d %Y'))";
+				+ "(103,'test3','system', " + "str_to_date('August 10 2017', '%M %d %Y'))";
 
 		try {
 			dbConnection = getDBConnection();

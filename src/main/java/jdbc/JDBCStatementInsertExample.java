@@ -37,7 +37,7 @@ public class JDBCStatementInsertExample {
 
 		String insertTableSQL = "INSERT INTO DBUSER"
 				+ "(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) " + "VALUES"
-				+ "(1,'mkyong','system', " + "str_to_date('August 10 2017', '%M %d %Y'))";
+				+ "(1,'test','system', " + "str_to_date('August 10 2017', '%M %d %Y'))";
 
 		try {
 			dbConnection = getDBConnection();

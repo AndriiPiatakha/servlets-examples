@@ -13,7 +13,7 @@ public class SessionTrack extends HttpServlet {
    public void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
          
-      // Create a session object if it is already not  created.
+      // Create a session object if it is already not created.
       HttpSession session = request.getSession(true);
          
       // Get session creation time.
@@ -42,7 +42,7 @@ public class SessionTrack extends HttpServlet {
       // Set response content type
       response.setContentType("text/html");
       PrintWriter out = response.getWriter();
-
+      
       String docType =
          "<!doctype html public \"-//w3c//dtd html 4.0 " +
          "transitional//en\">\n";
@@ -88,5 +88,7 @@ public class SessionTrack extends HttpServlet {
             "</body>" + 
          "</html>"
       );
+//      session.setAttribute(arg0, arg1);
+//      session.invalidate();
    }
 }

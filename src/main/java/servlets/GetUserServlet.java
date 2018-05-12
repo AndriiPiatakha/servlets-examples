@@ -6,7 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+// http://localhost:8080/sourceitWeb/GetUserServlet?userName=an
 @WebServlet("/GetUserServlet")
 public class GetUserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

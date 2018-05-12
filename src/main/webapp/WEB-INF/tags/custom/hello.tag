@@ -1,4 +1,4 @@
-<%@ attribute name="a" type="java.lang.Integer" %>
+<%@ attribute name="a" type="java.lang.Integer" required="true"%>
 
 aaaaaaaaaaaaaaaaaa
 </br>
@@ -10,4 +10,4 @@ aaaaaaaaaaaaaaaaaaaaaa
 </br>
 aaaaaaaaaaaaaaaaaaaaaa
 
-${a}
+${a + 2}

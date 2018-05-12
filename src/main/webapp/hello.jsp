@@ -13,14 +13,19 @@
 	aaaaaaaaa
 	<h2>Hi There!</h2>
 	<br>
+	<%
+		if (true) {
+	%>
 	<h3>
 		Date=<%=new Date()%>
 	</h3>
+	<% } else { %>
+	
+	else
+	
+	<% } %>
 	
 	<custom:hello a="111"/>
-	
-	
-	
 	
 	
 </body>

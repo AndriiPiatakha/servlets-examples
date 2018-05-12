@@ -32,6 +32,8 @@ public class ReadCookies extends HttpServlet {
 
 			for (int i = 0; i < cookies.length; i++) {
 				cookie = cookies[i];
+//				cookie.setMaxAge(0);
+//				response.addCookie(cookie);
 				out.print("Name : " + cookie.getName() + ",  ");
 				out.print("Value: " + cookie.getValue() + " <br/>");
 			}
@@ -40,5 +42,6 @@ public class ReadCookies extends HttpServlet {
 		}
 		out.println("</body>");
 		out.println("</html>");
+		
 	}
 }

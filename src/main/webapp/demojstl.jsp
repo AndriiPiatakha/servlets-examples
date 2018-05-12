@@ -20,13 +20,13 @@
 <%-- --%>
 	<custom:printArray coll="${array}" />
 	<br />
-	<c:out value="${null}" default="default" escapeXml="false"></c:out>
+	<c:out value="${null} <hello> asda" default="default" escapeXml="false"></c:out>
 	<br />
 	<ex:Hello message="message" coll="${array }"/>
 	<br />
 	
 	<%-- scopes: page, request, session, application --%>
-	<c:set var="salary" value="${2000*2}" />
+	<c:set var="salary" value="${2000*2}"/>
 	<c:out value="${salary}" />
 
 	<br />
@@ -129,7 +129,7 @@
       </p>
       
       <%-- FORMAT DATE DEMO --%>
-       <h3>Number Format:</h3>
+       <h3>Date Format:</h3>
       <c:set var = "now" value = "<%= new java.util.Date()%>" />
 
       <p>Formatted Date (1): <fmt:formatDate type = "time" 

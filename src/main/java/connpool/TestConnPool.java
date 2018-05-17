@@ -25,6 +25,25 @@ import org.apache.commons.dbcp.BasicDataSource;
 @WebServlet("/TestConnPool")
 public class TestConnPool extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+//	
+//	private DataSource dataSource;
+//	
+//	public UserDao() {
+//		this.dataSource = DbUtils.getDataSource();
+//	
+//		InitialContext initialContext;
+//		try {
+//			initialContext = new InitialContext();
+//			Context context = (Context) initialContext.lookup("java:comp/env");
+//			// The JDBC Data source that we just created
+//			this.ds = (DataSource) context.lookup("connpool");	
+//	}
+//		
+//		public User getUserById(int id) {
+//			try (Connection conn = dataSource.getConnection()) {
+//				// do stuff
+//			}
+//		}
 
 	/**
 	 * @see HttpServlet#HttpServlet()

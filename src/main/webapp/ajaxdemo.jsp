@@ -8,8 +8,7 @@
 </head>
 <body>
 	<script type="text/javascript">
-	
-		
+		${request.getAttribute("aasd")}
 	</script>
 
 </body>

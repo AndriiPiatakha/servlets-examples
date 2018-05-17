@@ -3,10 +3,12 @@ package filters;
 //Import required java libraries
 import java.io.*;
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.*;
 import java.util.*;
 
 //Implements Filter class
+//@WebFilter
 public class AuthenFilter implements Filter {
 	public void init(FilterConfig config) throws ServletException {
 
@@ -19,7 +21,10 @@ public class AuthenFilter implements Filter {
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws java.io.IOException, ServletException {
-
+//		HttpServletRequest tSr = (HttpServletRequest) request;
+//		tSr.getSession();
+//		tSr.isUserInRole("ROLE_ADMIN");
+		
 		// Get the IP address of client machine.
 		String ipAddress = request.getRemoteAddr();
 

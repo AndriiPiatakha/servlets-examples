@@ -36,6 +36,9 @@ public class FirstServlet extends HttpServlet {
 		String initParameter = getInitParameter("name");
 		out.println(HTML_START + "<h2>Hi There!</h2> init param = " + initParameter + "<br/><h3>Date=" + date + "</h3>"
 				+ HTML_END);
+		
+		// to demo filters, response back
+		System.out.println("In servlet");
 	}
 
 	/**

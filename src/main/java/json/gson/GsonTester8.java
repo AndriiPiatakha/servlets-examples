@@ -16,6 +16,7 @@ public class GsonTester8 {
       builder.setPrettyPrinting(); 
       Gson gson = builder.create();  
       
+      
       String jsonString = "{\"name\":\"Mahesh\", \"rollNo\":1}";  
       Student3 student = gson.fromJson(jsonString, Student3.class); 
       System.out.println(student);  

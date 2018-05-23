@@ -2,3 +2,27 @@
 	font-size: 25px;
 	font-weight: 700;
 }
+
+#someId {
+	font-size: 25px;
+}
+
+.class3.class4 {
+	font-size: 25px;
+}
+
+.class5 .class6 {
+	font-size: 25px;
+}
+
+.class5 .class6:hover {
+	background-color: green;
+}
+
+.class5 .class6:focus {
+	background-color: green;
+}
+
+p.class7 {
+	
+}

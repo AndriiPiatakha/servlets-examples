@@ -17,78 +17,78 @@ import json.models.Employee;
 public class JacksonStreamingReadExample {
 
 	public static void main(String[] args) throws JsonParseException, IOException {
-		
-		//create JsonParser object
-		JsonParser jsonParser = new JsonFactory().createParser(
-					JacksonStreamingReadExample.class.getClassLoader().getResourceAsStream("employee.txt"));
-		
-		//loop through the tokens
+
+		// create JsonParser object
+		JsonParser jsonParser = new JsonFactory()
+				.createParser(JacksonStreamingReadExample.class.getClassLoader().getResourceAsStream("employee.txt"));
+
+		// loop through the tokens
 		Employee emp = new Employee();
 		Address address = new Address();
 		emp.setAddress(address);
 		emp.setCities(new ArrayList<String>());
 		emp.setProperties(new HashMap<String, String>());
 		List<Long> phoneNums = new ArrayList<Long>();
-		boolean insidePropertiesObj=false;
-		
+		boolean insidePropertiesObj = false;
+
 		parseJSON(jsonParser, emp, phoneNums, insidePropertiesObj);
-		
+
 		long[] nums = new long[phoneNums.size()];
 		int index = 0;
-		for(Long l :phoneNums){
+		for (Long l : phoneNums) {
 			nums[index++] = l;
 		}
 		emp.setPhoneNumbers(nums);
-		
+
 		jsonParser.close();
-		//print employee object
-		System.out.println("Employee Object\n\n"+emp);
+		// print employee object
+		System.out.println("Employee Object\n\n" + emp);
 	}
 
-	private static void parseJSON(JsonParser jsonParser, Employee emp,
-			List<Long> phoneNums, boolean insidePropertiesObj) throws JsonParseException, IOException {
-		
-		//loop through the JsonTokens
-		while(jsonParser.nextToken() != JsonToken.END_OBJECT){
+	private static void parseJSON(JsonParser jsonParser, Employee emp, List<Long> phoneNums,
+			boolean insidePropertiesObj) throws JsonParseException, IOException {
+
+		// loop through the JsonTokens
+		while (jsonParser.nextToken() != JsonToken.END_OBJECT) {
 			String name = jsonParser.getCurrentName();
-			if("id".equals(name)){
+			if ("id".equals(name)) {
 				jsonParser.nextToken();
 				emp.setId(jsonParser.getIntValue());
-			}else if("name".equals(name)){
+			} else if ("name".equals(name)) {
 				jsonParser.nextToken();
 				emp.setName(jsonParser.getText());
-			}else if("permanent".equals(name)){
+			} else if ("permanent".equals(name)) {
 				jsonParser.nextToken();
 				emp.setPermanent(jsonParser.getBooleanValue());
-			}else if("address".equals(name)){
+			} else if ("address".equals(name)) {
 				jsonParser.nextToken();
-				//nested object, recursive call
+				// nested object, recursive call
 				parseJSON(jsonParser, emp, phoneNums, insidePropertiesObj);
-			}else if("street".equals(name)){
+			} else if ("street".equals(name)) {
 				jsonParser.nextToken();
 				emp.getAddress().setStreet(jsonParser.getText());
-			}else if("city".equals(name)){
+			} else if ("city".equals(name)) {
 				jsonParser.nextToken();
 				emp.getAddress().setCity(jsonParser.getText());
-			}else if("zipcode".equals(name)){
+			} else if ("zipcode".equals(name)) {
 				jsonParser.nextToken();
 				emp.getAddress().setZipcode(jsonParser.getIntValue());
-			}else if("phoneNumbers".equals(name)){
+			} else if ("phoneNumbers".equals(name)) {
 				jsonParser.nextToken();
 				while (jsonParser.nextToken() != JsonToken.END_ARRAY) {
 					phoneNums.add(jsonParser.getLongValue());
 				}
-			}else if("role".equals(name)){
+			} else if ("role".equals(name)) {
 				jsonParser.nextToken();
 				emp.setRole(jsonParser.getText());
-			}else if("cities".equals(name)){
+			} else if ("cities".equals(name)) {
 				jsonParser.nextToken();
 				while (jsonParser.nextToken() != JsonToken.END_ARRAY) {
 					emp.getCities().add(jsonParser.getText());
 				}
-			}else if("properties".equals(name)){
+			} else if ("properties".equals(name)) {
 				jsonParser.nextToken();
-				while(jsonParser.nextToken() != JsonToken.END_OBJECT){
+				while (jsonParser.nextToken() != JsonToken.END_OBJECT) {
 					String key = jsonParser.getCurrentName();
 					jsonParser.nextToken();
 					String value = jsonParser.getText();

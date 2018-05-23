@@ -7,12 +7,14 @@ $(document).ready(function() {
                         $('#ajaxGetUserServletResponse').text(responseText);
                 });
         });
+        
 });
 
 //$(document).ready(function() {
 //	$('#userName').blur(function() {
 //		$.ajax({
 //			url : 'GetUserServlet',
+//			method: 'GET',
 //			data : {
 //				userName : $('#userName').val()
 //			},

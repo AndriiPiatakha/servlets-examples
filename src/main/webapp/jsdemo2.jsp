@@ -68,6 +68,11 @@
 		typeof {
 			name : 'John',
 			age : 34
+			//otherObject : {
+				//oneMoreObject : {
+					
+				//}
+			//}
 		} // Returns "object"
 		typeof new Date() // Returns "object"
 		typeof function() {
@@ -75,6 +80,14 @@
 		typeof myCar // Returns "undefined" *
 		typeof null // Returns "object"
 		//debugger;
+		
+		// =======================  DEMO how boolean works
+			var a = "asd"
+			if (a) {alert('true')}
+			if (undefined) { alert()}
+			if (0) { alert()}
+			if (1) { alert()}
+			if (null) { alert()}
 
 		// JSON
 

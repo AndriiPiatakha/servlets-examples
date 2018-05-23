@@ -49,7 +49,7 @@ public class JacksonObjectMapperExample {
 		//writing to console, can write to any output stream such as file
 		StringWriter stringEmp = new StringWriter();
 		objectMapper.writeValue(stringEmp, emp1);
-		System.out.println("Employee JSON is\n"+stringEmp);
+		System.out.println("Employee JSON is\n" + stringEmp);
 		
 		
 		//converting json to Map
@@ -59,7 +59,7 @@ public class JacksonObjectMapperExample {
 		Map<String,String> myMap = new HashMap<String, String>();
 		
 		myMap = objectMapper.readValue(mapData, HashMap.class);
-		System.out.println("Map is: "+myMap);
+		System.out.println("Map is: " + myMap);
 		//another way
 		myMap = objectMapper.readValue(mapData, new TypeReference<HashMap<String,String>>() {});
 		System.out.println("Map using TypeReference: "+myMap);
@@ -90,7 +90,7 @@ public class JacksonObjectMapperExample {
 	public static Employee createEmployee() {
 
 		Employee emp = new Employee();
-		emp.setId(100);
+//		emp.setId(100);
 		emp.setName("David");
 		emp.setPermanent(false);
 		emp.setPhoneNumbers(new long[] { 123456, 987654 });

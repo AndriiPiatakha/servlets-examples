@@ -17,8 +17,8 @@
 	<form>
 		Enter Your Name: <input type="text" id="userName" />
 	</form>
-	<br>
-	<br>
+	<br/>
+	<br/>
 
 	<strong>Ajax Response</strong>:
 	<div id="ajaxGetUserServletResponse"></div>

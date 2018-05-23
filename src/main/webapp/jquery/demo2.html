@@ -27,6 +27,33 @@
 		//	$("#test").hide() - hides the element with id="test".
 
 		$(document).ready(function() {
+			
+			
+			$("p").click(function() {
+				$(this).hide();
+			});
+
+			$("p").on("click", function() {
+				$(this).hide();
+			});
+
+			$("p").on({
+				mouseenter : function() {
+					$(this).css("background-color", "lightgray");
+				},
+				mouseleave : function() {
+					$(this).css("background-color", "lightblue");
+				},
+				click : function() {
+					$(this).css("background-color", "yellow");
+				}
+			});
+
+			// HIDE AND SHOW EXAMPLES
+
+			$("button").click(function() {
+				$("p").toggle();
+			});
 
 			// jQuery methods go here...
 
@@ -61,34 +88,16 @@
 		//	mouseenter	keyup	focus	scroll
 		//	mouseleave	 	blur	unload
 
-		$("p").click(function() {
-			$(this).hide();
-		});
-
-		$("p").on("click", function() {
-			$(this).hide();
-		});
-
-		$("p").on({
-			mouseenter : function() {
-				$(this).css("background-color", "lightgray");
-			},
-			mouseleave : function() {
-				$(this).css("background-color", "lightblue");
-			},
-			click : function() {
-				$(this).css("background-color", "yellow");
-			}
-		});
-
-		// HIDE AND SHOW EXAMPLES
-
-		$("button").click(function() {
-			$("p").toggle();
-		});
+		
 		
 		
 	</script>
-
+	
+	<p>If you click on me, I will disappear.</p>
+	<p>Click me away!</p>
+	<p>Click me too!</p>
+	
+	<button > Some button </button>
+ 
 </body>
 </html>

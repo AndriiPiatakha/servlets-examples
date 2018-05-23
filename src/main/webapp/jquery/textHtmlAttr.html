@@ -17,7 +17,7 @@ $(document).ready(function(){
     $("#btn2").click(function(){
         alert("HTML: " + $("#test").html());
     });
-    $("#btn3").click(function(){
+    $("#btn3").click(function(e){
         alert($("#btn3").attr("class"));
     });
 });
@@ -32,6 +32,8 @@ $(document).ready(function(){
 <button id="btn1">Show Text</button>
 <button id="btn2">Show HTML</button>
 <button id="btn3" class="some-class">Show Attributes</button>
+
+<input required="required"/>
 
 </body>
 </html>

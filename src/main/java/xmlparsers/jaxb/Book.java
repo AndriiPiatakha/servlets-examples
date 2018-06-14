@@ -4,10 +4,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement(name = "book")
+//@XmlRootElement(name = "book")
 // If you want you can define the order in which the fields are written
 // Optional
-@XmlType(propOrder = { "author", "name", "publisher", "isbn" })
+//@XmlType(propOrder = { "author", "name", "publisher", "isbn" })
 public class Book {
 
     private String name;
@@ -17,7 +17,7 @@ public class Book {
 
     // If you like the variable name, e.g. "name", you can easily change this
     // name for your XML-Output:
-    @XmlElement(name = "title")
+//    @XmlElement(name = "title")
     public String getName() {
         return name;
     }

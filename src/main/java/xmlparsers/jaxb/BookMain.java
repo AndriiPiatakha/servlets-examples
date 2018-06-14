@@ -16,7 +16,6 @@ public class BookMain {
     private static final String BOOKSTORE_XML = "./bookstore-jaxb.xml";
 
     public static void main(String[] args) throws JAXBException, IOException {
-
         ArrayList<Book> bookList = new ArrayList<Book>();
 
         // create books

@@ -5,10 +5,10 @@
 	xsi:noNamespaceSchemaLocation="shiporder.xsd">
   <orderperson>John Smith</orderperson>
   <shipto>
+  	<country>Norway</country>
     <name>Ola Nordmann</name>
     <address>Langgt 23</address>
     <city>4000 Stavanger</city>
-    <country>Norway</country>
   </shipto>
   <item>
     <title>Empire Burlesque</title>

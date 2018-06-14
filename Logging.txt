@@ -1,16 +1,4 @@
-Mar 17, 2018 4:52:53 PM logging.javalogging.UseLogger doSomeThingAndLog
+May 26, 2018 2:35:53 PM logging.javalogging.UseLogger doSomeThingAndLog
 SEVERE: SEVER Log
-Mar 17, 2018 4:52:53 PM logging.javalogging.UseLogger doSomeThingAndLog
-WARNING: WARNING Log
-Mar 17, 2018 4:52:53 PM logging.javalogging.UseLogger doSomeThingAndLog
-INFO: Info Log
-Mar 17, 2018 4:52:53 PM logging.javalogging.UseLogger doSomeThingAndLog
-FINEST: FINEST Really not important
-Mar 17, 2018 4:52:53 PM logging.javalogging.UseLogger doSomeThingAndLog
+May 26, 2018 2:35:53 PM logging.javalogging.UseLogger doSomeThingAndLog
 SEVERE: SEVERE Log
-Mar 17, 2018 4:52:53 PM logging.javalogging.UseLogger doSomeThingAndLog
-WARNING: WARNING Log
-Mar 17, 2018 4:52:53 PM logging.javalogging.UseLogger doSomeThingAndLog
-INFO: Info Log
-Mar 17, 2018 4:52:53 PM logging.javalogging.UseLogger doSomeThingAndLog
-FINEST: Finest Really not important

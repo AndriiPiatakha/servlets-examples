@@ -3,15 +3,15 @@
     <bookList>
         <book>
             <author>Neil Strauss</author>
-            <title>The Game</title>
-            <publisher>Harpercollins</publisher>
             <isbn>978-0060554736</isbn>
+            <name>The Game</name>
+            <publisher>Harpercollins</publisher>
         </book>
         <book>
             <author>Charlotte Roche</author>
-            <title>Feuchtgebiete</title>
-            <publisher>Dumont Buchverlag</publisher>
             <isbn>978-3832180577</isbn>
+            <name>Feuchtgebiete</name>
+            <publisher>Dumont Buchverlag</publisher>
         </book>
     </bookList>
     <location>Frankfurt Airport</location>

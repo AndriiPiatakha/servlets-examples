@@ -9,6 +9,7 @@ public class L18nDemo {
 	public static void main(String[] args) {
 
 		// ru_RU
+		Locale.setDefault(new Locale("ru", "RU"));
 		System.out.println("Current Locale: " + Locale.getDefault());
 		ResourceBundle mybundle = ResourceBundle.getBundle("MyLabels");
 //		ResourceBundle mybundle = ResourceBundle.getBundle("MyLabels", Locale.ENGLISH);
@@ -25,7 +26,8 @@ public class L18nDemo {
 
 		
 		// class bundle
-		mybundle = ResourceBundle.getBundle("l18n.MyLabels", Locale.GERMANY);
+		Locale.setDefault(new Locale("de", "DE"));
+		mybundle = ResourceBundle.getBundle("MyLabels");
 		Object object = mybundle.getObject("value1");
 		Set<String> keySet = mybundle.keySet();
 		System.out.println(object);

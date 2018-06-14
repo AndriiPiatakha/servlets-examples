@@ -68,8 +68,8 @@
 <xs:element name="car">
   <xs:simpleType>
     <xs:restriction base="xs:string">
-      <xs:enumeration value="Audi"/>
-      <xs:enumeration value="Golf"/>
+      <xs:enumeration value="AUDI"/>
+      <xs:enumeration value="Mercedes"/>
       <xs:enumeration value="BMW"/>
     </xs:restriction>
   </xs:simpleType>

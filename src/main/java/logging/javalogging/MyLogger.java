@@ -31,6 +31,8 @@ public class MyLogger {
         logger.setLevel(Level.FINE);
         fileTxt = new FileHandler("Logging.txt");
         fileHTML = new FileHandler("Logging.html");
+        
+        fileTxt.setLevel(Level.SEVERE);
 
         // create a TXT formatter
         formatterTxt = new SimpleFormatter();

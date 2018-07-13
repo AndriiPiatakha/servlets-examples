@@ -24,6 +24,7 @@ import java.util.List;
 import org.powermock.api.mockito.*;
 import org.hamcrest.core.AnyOf;
 import org.junit.Ignore;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Answers;
@@ -38,6 +39,7 @@ import org.powermock.configuration.PowerMockConfiguration;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 
 import org.powermock.modules.junit4.PowerMockRunner;
+import org.powermock.modules.junit4.rule.PowerMockRule;
 
 @RunWith(MockitoJUnitRunner.class)
 //@RunWith(PowerMockRunner.class)
@@ -49,10 +51,14 @@ public class DemoMock {
 //	@Spy
 	private Car car;
 	
+//	@Rule
+//	public PowerMockRule pmRule;
+	
 	@Test
+	@Ignore
 	public void shouldMockInterface() {
 		Inter mock = mock(Inter.class);
-		
+		System.out.println(mock.getClass());
 		when(mock.doSomething()).thenCallRealMethod();
 		String doSomething = mock.doSomething();
 		System.out.println(doSomething);
@@ -60,16 +66,25 @@ public class DemoMock {
 	
 	@Test
 	@Ignore
-	public void shouldNoThrowException() {
+	public void shouldCallRealMethod() {
+		Car car = mock(Car.class);
+//		when(car.getName()).thenCallRealMethod();
+		System.out.println(car.getName());
+	}
+	
+	@Test
+	@Ignore
+	public void shouldNotThrowException() {
 		car.drive();
 	}
 	
 	@Test
 	@Ignore
 	public void shouldThrowNullPointerWithoutDeepStub() {
-		car.startEngine();
+//		car.startEngine();
 		Engine engine = car.getEngine();
 		engine.start();
+		System.out.println(engine.getClass());
 	}
 	
 	@Test
@@ -95,6 +110,7 @@ public class DemoMock {
 	public void demoSpy() {
 		List<String> spyList = spy(new ArrayList<String>());
 //		spyList.get(0);
+//		when(spyList.get(0)).thenReturn("Hello");	this will throw IOB exception
 		doReturn("Hello").when(spyList).get(20);
 		String string = spyList.get(20);
 		assertThat(string, equalTo("Hello"));
@@ -104,7 +120,7 @@ public class DemoMock {
 	@Ignore
 	public void demoCaptor() {
 		ArgumentCaptor<Engine> captor = ArgumentCaptor.forClass(Engine.class);
-		Car carSpy = Mockito.spy(new Car());
+		Car carSpy = spy(new Car());
 		
 		Engine engine = new Engine();
 		engine.setName("BMW engine");
@@ -127,11 +143,22 @@ public class DemoMock {
 	
 	// cannot mock final classes
 	@Test
-	@Ignore
+//	@Ignore
 	public void shouldThrowExceptionWhenMockFinalClass() {
 		String string = mock(String.class);
 		when(string.length()).thenReturn(20);
 		assertThat(string.length(), equalTo(20));
+	}
+	
+	@Test
+	public void shouldThrowExceptionWhenStubEqualsAndHashCode() {
+//		when(car.hashCode()).thenReturn(1);
+		when(car.equals(new Object())).thenReturn(true);
+	}
+	
+	@Test
+	public void shouldThrowExceptionWhenMockStaticMethod() {
+		when(car.someStaticMethodInCar()).thenReturn(3);
 	}
 	
 	@Test
@@ -190,7 +217,7 @@ public class DemoMock {
 				}
 				return null;
 			}
-		}).when(car).fuelInjection(Mockito.any(Engine.class));;
+		}).when(car).fuelInjection(Mockito.any(Engine.class));
 		car.fuelInjection(new Engine());
 	}
 	
@@ -300,6 +327,10 @@ class Car {
 	
 	public void setEngine(Engine engine) {
 		this.engine = engine;
+	}
+	
+	public static int someStaticMethodInCar() {
+		return 1;
 	}
 }
 

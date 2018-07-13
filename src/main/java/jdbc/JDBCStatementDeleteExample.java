@@ -40,7 +40,7 @@ public class JDBCStatementDeleteExample {
 			System.out.println(deleteTableSQL);
 
 			// execute delete SQL stetement
-			statement.execute(deleteTableSQL);
+			statement.executeUpdate(deleteTableSQL);
 
 			System.out.println("Record is deleted from DBUSER table!");
 

@@ -24,7 +24,7 @@ class MyStatement extends Statement {
 	@Override
 	public void evaluate() throws Throwable {
 		System.out.println("before");
-		System.out.println(5 / 0);
+//		System.out.println(5 / 0);
 		try {
 			base.evaluate();
 		} finally {

@@ -42,7 +42,7 @@ public class JDBCStatementUpdateExample {
 			System.out.println(updateTableSQL);
 
 			// execute update SQL stetement
-			statement.execute(updateTableSQL);
+			statement.executeUpdate(updateTableSQL);
 
 			System.out.println("Record is updated to DBUSER table!");
 

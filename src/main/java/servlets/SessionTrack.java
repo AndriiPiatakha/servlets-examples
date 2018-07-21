@@ -14,7 +14,7 @@ public class SessionTrack extends HttpServlet {
       throws ServletException, IOException {
          
       // Create a session object if it is already not created.
-      HttpSession session = request.getSession(true);
+      HttpSession session = request.getSession();
          
       // Get session creation time.
       Date createTime = new Date(session.getCreationTime());
@@ -38,7 +38,7 @@ public class SessionTrack extends HttpServlet {
          userID = (String)session.getAttribute(userIDKey);
       }
       session.setAttribute(visitCountKey,  visitCount);
-
+//      session.invalidate();
       // Set response content type
       response.setContentType("text/html");
       PrintWriter out = response.getWriter();

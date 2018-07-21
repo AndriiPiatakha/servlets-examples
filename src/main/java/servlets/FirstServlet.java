@@ -18,7 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  @WebServlet(description = "My First Servlet",
  urlPatterns = { "/FirstServlet" , "/FirstServlet.do"},
  initParams =
- {@WebInitParam(name="id",value="1"),@WebInitParam(name="name",value="test")})
+ {@WebInitParam(name="id",value="1"),@WebInitParam(name="name",value="test")}
+ )
 public class FirstServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public static final String HTML_START = "<html><body>";

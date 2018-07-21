@@ -6,6 +6,7 @@ import javax.servlet.http.*;
 import java.util.*;
 
 // Extend HttpServlet class
+// @TODO need to be reviewed
 public class ReadAllParams extends HttpServlet {
 
 	// Method to handle GET method request.

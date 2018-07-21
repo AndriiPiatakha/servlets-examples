@@ -20,6 +20,8 @@ public class ReadCookies extends HttpServlet {
 		// Set response content type
 		response.setContentType("text/html");
 
+		response.addCookie(cookies[0]);
+		
 		PrintWriter out = response.getWriter();
 		String title = "Reading Cookies Example";
 		String docType = "<!doctype html public \"-//w3c//dtd html 4.0 " + "transitional//en\">\n";

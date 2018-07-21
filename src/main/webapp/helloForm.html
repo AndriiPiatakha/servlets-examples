@@ -1,10 +1,21 @@
 <html>
    <body>
       <form action = "helloForm" method = "GET">
-         First Name: <input type = "text" name = "first_name">
+         First Name: <input type = "text" name = "first_name" required>
          <br />
-         Last Name: <input type = "text" name = "last_name" />
-         <input type = "submit" value = "Submit" />
+         Last Name: <input type = "text" name = "last_name"/>
+         <br/>
+         Readonly field: <input type = "text" name = "readOnly" value="readOnly" readonly/>
+         <br/>
+         
+         Disabled field: <input type = "text" name = "disadbl" value="disadbl" disabled/>
+         <br/>
+         <input type = "date" name = "date" />
+         <br/>
+         <input type = "password" name = "pass" />
+         <input type = "hidden" name = "hiddenAttr" value="${tourId}">
+         <input type = "reset" value = "Reset" /> 
+         <input type = "submit" value = "Submit" style="display:none"/>
       </form>
    </body>
 </html>

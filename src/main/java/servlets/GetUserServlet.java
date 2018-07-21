@@ -13,7 +13,7 @@ public class GetUserServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String userName = request.getParameter("userName").trim();
+		String userName = request.getParameter("userName");
 		if(userName == null || "".equals(userName)){
 			userName = "Guest";
 		}

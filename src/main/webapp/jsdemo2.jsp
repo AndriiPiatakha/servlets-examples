@@ -15,7 +15,8 @@
 	Hello )
 	<script type="text/javascript">
 		function switchHtml() {
-			//debugger;
+			// debugger;
+			console.log("here");
 			document.getElementById('demo2').innerHTML = 'Hello JavaScript';
 			document.getElementById('demo2').style.fontSize = '35px';
 			document.getElementById("demo2").style.display = "none";
@@ -59,6 +60,8 @@
 		points.sort(function(a, b) {
 			return b - a
 		});
+		
+		points.sort( (a, b) => {return b - a});
 
 		typeof "John" // Returns "string" 
 		typeof 3.14 // Returns "number"

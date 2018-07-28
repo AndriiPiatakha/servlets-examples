@@ -4,3 +4,7 @@
 2018-05-26-main--INFO -logging.Log4jExample:Hello this is an info message
 2018-05-26-main--INFO -logging.slf4j.Slf4jLogging:Testing 123
 2018-05-26-main--INFO -logging.slf4j.Slf4jLogging:Testing 123
+2018-07-28-main--DEBUG-logging.log4j.Log4jExample:Hello this is a debug message
+2018-07-28-main--INFO -logging.log4j.Log4jExample:Hello this is an info message
+2018-07-28-main--INFO -logging.slf4j.Slf4jLogging:Testing 123
+2018-07-28-main--INFO -logging.slf4j.Slf4jLogging:Testing 123

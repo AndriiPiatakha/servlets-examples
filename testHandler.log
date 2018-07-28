@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2018-03-17T16:59:37</date>
-  <millis>1521298777406</millis>
+  <date>2018-07-28T17:31:43</date>
+  <millis>1532788303142</millis>
   <sequence>0</sequence>
   <logger>logging.javalogging.examples.LoggerExample</logger>
   <level>CONFIG</level>
@@ -13,8 +13,8 @@
   <message>Configuration done.</message>
 </record>
 <record>
-  <date>2018-03-17T16:59:37</date>
-  <millis>1521298777450</millis>
+  <date>2018-07-28T17:31:43</date>
+  <millis>1532788303161</millis>
   <sequence>1</sequence>
   <logger>logging.javalogging.examples.LoggerExample</logger>
   <level>FINE</level>
@@ -24,8 +24,8 @@
   <message>Finer logged</message>
 </record>
 <record>
-  <date>2018-03-17T16:59:37</date>
-  <millis>1521298777450</millis>
+  <date>2018-07-28T17:31:43</date>
+  <millis>1532788303161</millis>
   <sequence>2</sequence>
   <logger>logging.javalogging.examples.LoggerExample</logger>
   <level>FINER</level>

@@ -38,6 +38,14 @@ public class AuthenFilter implements Filter {
 		System.out.println("exiting filter");
 		
 		
+		HttpServletRequest r = (HttpServletRequest)request;
+		r.getSession();
+//		request.getSession();
+		HttpServletResponse resp = (HttpServletResponse)response;
+		resp.setStatus(403);
+//		resp.setHeader(name, value);
+		resp.sendError(403);
+		
 	}
 
 	public void destroy() {

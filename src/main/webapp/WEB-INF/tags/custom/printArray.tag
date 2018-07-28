@@ -2,7 +2,7 @@
 
 <%@ attribute name="coll" type="java.util.Collection" required="true"%>
 
-<table>
+<table border="4">
 <c:forEach items="${coll}" var="item">
 	<tr>
 		<td>

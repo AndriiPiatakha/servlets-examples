@@ -9,7 +9,7 @@ public class JDBCStatementCreateExample {
 
 	private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
 	private static final String JDBC_MYSQL_HOST = "jdbc:mysql://localhost:3306/";
-	private static final String DB_NAME = "mydbtest";
+	private static final String DB_NAME = "sourceit";
 	private static final String DB_USER = "root";
 	private static final String DB_PASSWORD = "root";
 
@@ -29,8 +29,8 @@ public class JDBCStatementCreateExample {
 
 	private static void createDbUserTable() throws SQLException {
 
-		Connection dbConnection = null;
-		Statement statement = null;
+//		Connection dbConnection = null;
+//		Statement statement = null;
 
 		String createTableSQL = "CREATE TABLE DBUSER(" + 
 				"USER_ID INT NOT NULL, "
@@ -39,13 +39,14 @@ public class JDBCStatementCreateExample {
 				+ "CREATED_DATE DATE NOT NULL, " 
 				+ "PRIMARY KEY (USER_ID) " + ")";
 
-		try {
-			dbConnection = getDBConnection();
-			statement = dbConnection.createStatement();
+		try (Connection dbConnection = getDBConnection();
+				Statement statement = dbConnection.createStatement()) {
 
 			System.out.println(createTableSQL);
 			// execute the SQL stetement
 			statement.execute(createTableSQL);
+//			statement.executeQuery(sql)
+//			statement.executeUpdate(sql)
 
 			System.out.println("Table \"dbuser\" is created!");
 
@@ -53,17 +54,19 @@ public class JDBCStatementCreateExample {
 			System.out.println(2);
 			System.err.println(e.getMessage());
 
-		} finally {
-
-			if (statement != null) {
-				statement.close();
-			}
-
-			if (dbConnection != null) {
-				dbConnection.close();
-			}
-
-		}
+		} 
+		
+//		finally {
+//
+//			if (statement != null) {
+//				statement.close();
+//			}
+//
+//			if (dbConnection != null) {
+//				dbConnection.close();
+//			}
+//
+//		}
 
 	}
 

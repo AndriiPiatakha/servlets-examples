@@ -13,7 +13,7 @@ value pair. We can define one file per locale and all file will have same keys b
 Syntax of tag is –
 
 <fmt:setBundle basename="bundle_base_name" var="variable_name" 
-scope=”page| request | application| session”/>ession”/>
+scope=��page| request | application| session />
 
 · basename- is mandatory attribute and used to specify base name of bundle.
 

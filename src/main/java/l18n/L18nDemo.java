@@ -10,6 +10,7 @@ public class L18nDemo {
 
 		// ru_RU
 		Locale.setDefault(new Locale("ru", "RU"));
+		Locale italy = Locale.ITALY;
 		System.out.println("Current Locale: " + Locale.getDefault());
 		ResourceBundle mybundle = ResourceBundle.getBundle("MyLabels");
 //		ResourceBundle mybundle = ResourceBundle.getBundle("MyLabels", Locale.ENGLISH);

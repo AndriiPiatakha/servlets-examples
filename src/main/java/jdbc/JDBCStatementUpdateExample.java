@@ -32,7 +32,7 @@ public class JDBCStatementUpdateExample {
 		Statement statement = null;
 
 		String updateTableSQL = "UPDATE DBUSER"
-				+ " SET USERNAME = 'mkyong_new' "
+				+ " SET USERNAME = 'test' "
 				+ " WHERE USER_ID = 1";
 
 		try {

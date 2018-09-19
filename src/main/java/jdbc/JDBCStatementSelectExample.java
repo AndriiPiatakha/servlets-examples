@@ -55,7 +55,6 @@ public class JDBCStatementSelectExample {
 			ResultSetMetaData metaData = rs.getMetaData();
 			int columnCount = metaData.getColumnCount();
 			
-			
 			while (rs.next()) {
 				String userid = rs.getString("USER_ID");
 				String username = rs.getString("USERNAME");

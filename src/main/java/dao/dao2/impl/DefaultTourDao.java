@@ -1,16 +1,31 @@
 package dao.dao2.impl;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
 
+import javax.sql.DataSource;
+
 import dao.dao2.TourDao;
+import dao.dbutils.DataSourceUtils;
 import dao.models.Tour;
 import dao.models.User;
 
 public class DefaultTourDao implements TourDao {
+	
+	private DataSource ds;
+	
+	{
+		ds = DataSourceUtils.getDataSource();
+	}
 
 	@Override
 	public Tour getTourById(int id) {
-		// TODO Auto-generated method stub
+		try {
+			Connection conn = ds.getConnection();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		return null;
 	}
 

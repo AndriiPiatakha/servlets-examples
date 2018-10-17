@@ -28,6 +28,7 @@ public class HelloForm extends HttpServlet {
 		Cookie firstName = new Cookie("first_name", request.getParameter("first_name"));
 		Cookie lastName = new Cookie("last_name", request.getParameter("last_name"));
 		
+//		firstName.setMaxAge(0);
 		// Add both the cookies in the response header.
 		response.addCookie(firstName);
 		response.addCookie(lastName);

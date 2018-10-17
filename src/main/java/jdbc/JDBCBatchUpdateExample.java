@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat;
 public class JDBCBatchUpdateExample {
 
 	private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
-	private static final String DB_CONNECTION = "jdbc:mysql://localhost:3306/mydbtest";
+	private static final String DB_CONNECTION = "jdbc:mysql://localhost:3306/sourceit";
 	private static final String DB_USER = "root";
 	private static final String DB_PASSWORD = "root";
 	private static final DateFormat dateFormat = new SimpleDateFormat(
@@ -39,7 +39,7 @@ public class JDBCBatchUpdateExample {
 				+ "(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) " + "VALUES"
 				+ "(101,'test1','system', " + "str_to_date('August 10 2017', '%M %d %Y'))";
 
-		String insertTableSQL2 = "INSERT INTO DBUSER"
+		String insertTableSQL2 = "INSERT INTO DBUSERasas"
 				+ "(USER_ID, USERNAME, CREATED_BY, CREATED_DATE) " + "VALUES"
 				+ "(102,'test2','system', " + "str_to_date('August 10 2017', '%M %d %Y'))";
 

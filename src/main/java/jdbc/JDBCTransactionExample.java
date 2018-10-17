@@ -10,7 +10,7 @@ import java.sql.Savepoint;
 public class JDBCTransactionExample {
 
 	private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
-	private static final String DB_CONNECTION = "jdbc:mysql://localhost:3306/mydbtest";
+	private static final String DB_CONNECTION = "jdbc:mysql://localhost:3306/sourceit";
 	private static final String DB_USER = "root";
 	private static final String DB_PASSWORD = "root";
 

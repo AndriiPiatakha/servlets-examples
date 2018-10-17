@@ -42,7 +42,7 @@ public class JDBCPreparedStatementInsertExample {
 			preparedStatement = dbConnection.prepareStatement(insertTableSQL);
 
 			preparedStatement.setInt(1, 11);
-			preparedStatement.setString(2, "mkyong");
+			preparedStatement.setString(2, "test");
 			preparedStatement.setString(3, "system");
 			preparedStatement.setTimestamp(4, getCurrentTimeStamp());
 

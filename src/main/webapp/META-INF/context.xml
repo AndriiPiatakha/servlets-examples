@@ -28,13 +28,13 @@
     <Resource name="connpool" 
     		auth="Container" 
     		type="javax.sql.DataSource"
-            maxActive="1" 
-            maxIdle="1" 
-            maxWait="1"
-            maxAge="1"
+            maxActive="5" 
+            maxIdle="5" 
+            maxWait="1000000"
+            maxAge="1000000"
             username="root" 
             password="root" 
             driverClassName="com.mysql.jdbc.Driver"
-            url="jdbc:mysql://localhost:3306/test"/>
+            url="jdbc:mysql://localhost:3306/sourceit?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
 
 </Context>

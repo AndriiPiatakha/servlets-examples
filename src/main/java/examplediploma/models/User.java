@@ -5,12 +5,19 @@ import java.util.List;
 
 public class User {
 	
+	private int id;
 	private String name;
 	private String lastName;
 	private Date dob;
 	private List<Tour> tours;
 	
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
@@ -35,7 +42,10 @@ public class User {
 	public void setTours(List<Tour> tours) {
 		this.tours = tours;
 	}
-	
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", lastName=" + lastName + ", dob=" + dob + ", tours=" + tours + "]";
+	}
 	
 
 }

@@ -22,9 +22,12 @@ public class UserServlet extends HttpServlet {
     
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		User user = userFacade.getUserById(Integer.valueOf(request.getParameter("userId")));
-		System.out.println(user);
-		
+		String userId = request.getParameter("userId");
+		if (userId != null) {
+			User user = userFacade.getUserById(Integer.valueOf(userId));
+			System.out.println(user);
+		}
+	
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 }

@@ -8,6 +8,7 @@ public class User {
 	private int id;
 	private String name;
 	private String lastName;
+	private String email;
 	private Date dob;
 	private List<Tour> tours;
 	
@@ -41,6 +42,13 @@ public class User {
 	}
 	public void setTours(List<Tour> tours) {
 		this.tours = tours;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	@Override
 	public String toString() {

@@ -19,5 +19,10 @@ public class UserFacade {
 		}
 		throw new IllegalArgumentException();
 	}
+	
+	public boolean saveUser(User user) {
+		// validate user
+		return userDao.saveUser(user);
+	}
 
 }

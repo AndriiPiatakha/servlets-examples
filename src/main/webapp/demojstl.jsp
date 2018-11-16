@@ -20,7 +20,7 @@ ${session.getAttribute("bean").name }
 	<custom:hello a="2333"/>
 	<custom:printArray coll="${array}" />
 	<br />
-	<c:out value="${null} <hello> asda" default="default" escapeXml="false"></c:out>
+	<c:out value="${null} <hello> asda" default="default" escapeXml="true"></c:out>
 	<br />
 	<ex:Hello message="message" coll="${array}"/>
 	<br />

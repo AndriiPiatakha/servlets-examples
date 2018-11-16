@@ -9,6 +9,13 @@
 <script>
 	$(document).ready(function() {
 		$("#update_button").click(function() {
+			var password = $('#pass').val();
+			var passwordRepeat = $('#passRepeat').val();
+			if (password !== passwordRepeat) {
+				$('#passErrorMessage').html('Check password');
+				return;
+			}
+
 			$.ajax({
 				url : 'updateUser',
 				data : {
@@ -33,14 +40,17 @@
 </head>
 <body>
 
-<form action="updateUser" method="PUT">
+<form action="updateUser" method="POST">
 		<input id="userId" type="hidden" name="userId" value="${user.id }">
 		<p>First Name: <input id="userName" type="text" name="name" value="${user.name }" required/> <span style="color:red"> ${nameErrorMessage} </span></p>
 		
 		<p>Last Name now is ${user.lastName }.</p>
 		<input type="text" name="last_name" />
 		<p>Password</p>
-		<input type="password" />
+		<input id="pass" type="password" />
+		<p>Repeat Password  <span id="passErrorMessage" style="color:red"/></p>
+		<input id="passRepeat" type="password" />
+		
 		<p>Email now is ${user.email }.</p>
 		<input type="email" name="email" />
 		<p>Date of Birth now is ${user.dob }</p>

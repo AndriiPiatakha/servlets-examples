@@ -35,16 +35,16 @@ public class AuthenFilter implements Filter {
 		chain.doFilter(request, response);
 		
 		// Smth what should be done sending request back
-		System.out.println("exiting filter");
+		System.out.println("====== exiting filter");
 		
 		
-		HttpServletRequest r = (HttpServletRequest)request;
-		r.getSession();
+//		HttpServletRequest r = (HttpServletRequest)request;
+//		r.getSession();
 //		request.getSession();
-		HttpServletResponse resp = (HttpServletResponse)response;
-		resp.setStatus(403);
+//		HttpServletResponse resp = (HttpServletResponse)response;
+//		resp.setStatus(403);
 //		resp.setHeader(name, value);
-		resp.sendError(403);
+//		resp.sendError(403);
 		
 	}
 

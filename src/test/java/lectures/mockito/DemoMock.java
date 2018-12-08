@@ -29,6 +29,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Answers;
 import org.mockito.ArgumentCaptor;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.Spy;
@@ -47,8 +48,12 @@ import org.powermock.modules.junit4.rule.PowerMockRule;
 public class DemoMock {
 	
 	@Mock
+	private Engine engine;
+	
+	@Mock
 //	(answer=Answers.RETURNS_DEEP_STUBS)
 //	@Spy
+	@InjectMocks
 	private Car car;
 	
 //	@Rule

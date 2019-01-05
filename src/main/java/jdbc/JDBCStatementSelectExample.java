@@ -69,8 +69,8 @@ public class JDBCStatementSelectExample {
 			}
 
 		} catch (SQLException e) {
-
-			System.out.println(e.getMessage());
+			e.printStackTrace();
+			System.err.println(e.getMessage());
 
 		} finally {
 

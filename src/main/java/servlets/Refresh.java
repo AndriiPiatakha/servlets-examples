@@ -15,7 +15,7 @@ public class Refresh extends HttpServlet {
       throws ServletException, IOException {
    
       // Set refresh, autoload time as 5 seconds
-      response.setIntHeader("Refresh", 5);
+      response.setIntHeader("Refresh", 2);
  
       // Set response content type
       response.setContentType("text/html");

@@ -15,7 +15,7 @@
 	Hello )
 	<script type="text/javascript">
 		function switchHtml() {
-			// debugger;
+			//debugger;
 			console.log("here");
 			document.getElementById('demo2').innerHTML = 'Hello JavaScript';
 			document.getElementById('demo2').style.fontSize = '35px';
@@ -257,6 +257,7 @@
 		//JavaScript can create new HTML events in the page
 		
 		document.getElementById("demo5").innerHTML = "Hello World!";
+		
 		
 		// METHODS
 		

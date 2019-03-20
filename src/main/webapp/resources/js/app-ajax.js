@@ -1,5 +1,6 @@
 $(document).ready(function() {
         $('#userName').blur(function(event) {
+        		console.log(event);
                 var name = $('#userName').val();
                 $.get('GetUserServlet', {
                         userName : name

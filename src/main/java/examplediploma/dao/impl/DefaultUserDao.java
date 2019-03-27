@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -46,7 +47,19 @@ public class DefaultUserDao implements UserDao {
 
 	@Override
 	public List<User> getAllUsers() {
-		return null;
+		List<User> users = new ArrayList<>();
+		// get connection
+		// get statement
+		// execute query 
+		// get result set
+		// while loop 
+//		while (rs.next()) {
+//			User user = new User();
+//			user.setId(rs.getInt("id"));
+//			users.add(user);
+//		}
+//		
+		return users;
 	}
 
 	@Override

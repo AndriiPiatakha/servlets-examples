@@ -31,7 +31,6 @@ public class JDBCPreparedStatementSelectExample {
 
 		Connection dbConnection = null;
 		PreparedStatement preparedStatement = null;
-
 		String selectSQL = "SELECT USER_ID, USERNAME FROM DBUSER WHERE USER_ID = ?";
 
 		try {

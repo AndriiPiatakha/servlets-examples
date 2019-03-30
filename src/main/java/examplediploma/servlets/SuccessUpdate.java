@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import examplediploma.models.User;
+import examplediploma.models.UserData;
 
 @WebServlet("/successUpdate")
 public class SuccessUpdate extends HttpServlet {

@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import examplediploma.facades.UserFacade;
-import examplediploma.models.User;
+import examplediploma.models.UserData;
 
 @WebServlet("/updateUser")
 public class UpdateUser extends HttpServlet {
@@ -29,7 +29,7 @@ public class UpdateUser extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		User user = userFacade.getUserById(1);
+		UserData user = userFacade.getUserById(1);
 		session.setAttribute("currentUser", user);
 		System.out.println(user);
 		request.setAttribute("user", user); // set attribute for .jsp
@@ -57,7 +57,7 @@ public class UpdateUser extends HttpServlet {
 		System.out.println(userId);
 		System.out.println(name);
 
-		User user = new User();
+		UserData user = new UserData();
 		user.setName(name);
 		user.setLastName(lastName);
 		user.setEmail(email);

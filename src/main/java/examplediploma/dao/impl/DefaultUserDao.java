@@ -11,7 +11,7 @@ import javax.sql.DataSource;
 
 import dao.dbutils.DataSourceUtils;
 import examplediploma.dao.UserDao;
-import examplediploma.models.User;
+import examplediploma.models.UserData;
 
 public class DefaultUserDao implements UserDao {
 	
@@ -26,8 +26,8 @@ public class DefaultUserDao implements UserDao {
 	}
 
 	@Override
-	public User getUserById(int id) {
-		User user = new User();
+	public UserData getUserById(int id) {
+		UserData user = new UserData();
 		try (Connection conn = ds.getConnection()) {
 			PreparedStatement prepareStatement = conn.prepareStatement(SELECT_USER_BY_ID_QUERY);
 			prepareStatement.setInt(1, id);
@@ -46,8 +46,8 @@ public class DefaultUserDao implements UserDao {
 	}
 
 	@Override
-	public List<User> getAllUsers() {
-		List<User> users = new ArrayList<>();
+	public List<UserData> getAllUsers() {
+		List<UserData> users = new ArrayList<>();
 		// get connection
 		// get statement
 		// execute query 
@@ -63,7 +63,7 @@ public class DefaultUserDao implements UserDao {
 	}
 
 	@Override
-	public boolean saveUser(User user) {
+	public boolean saveUser(UserData user) {
 		try (Connection conn = ds.getConnection()) {
 			PreparedStatement ps = conn.prepareStatement(INSERT_USER_WITH_NAME_ONLY);
 			ps.setString(1, user.getName());

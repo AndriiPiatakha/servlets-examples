@@ -2,13 +2,13 @@ package examplediploma.dao;
 
 import java.util.List;
 
-import examplediploma.models.User;
+import examplediploma.models.UserData;
 
 
 public interface UserDao {
 	
-	User getUserById(int id);
-	List<User> getAllUsers();
-	boolean saveUser(User user);
+	UserData getUserById(int id);
+	List<UserData> getAllUsers();
+	boolean saveUser(UserData user);
 
 }

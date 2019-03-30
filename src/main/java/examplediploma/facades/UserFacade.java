@@ -2,7 +2,7 @@ package examplediploma.facades;
 
 import examplediploma.dao.UserDao;
 import examplediploma.dao.impl.DefaultUserDao;
-import examplediploma.models.User;
+import examplediploma.models.UserData;
 
 public class UserFacade {
 	
@@ -13,14 +13,14 @@ public class UserFacade {
 	}
 	
 	// TODO Convert User to UserData object
-	public User getUserById(int id) {
+	public UserData getUserById(int id) {
 		if (id > 0) {
 			return userDao.getUserById(id);
 		}
 		throw new IllegalArgumentException();
 	}
 	
-	public boolean saveUser(User user) {
+	public boolean saveUser(UserData user) {
 		// validate user
 		return userDao.saveUser(user);
 	}

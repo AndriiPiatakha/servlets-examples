@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import examplediploma.facades.UserFacade;
-import examplediploma.models.User;
+import examplediploma.models.UserData;
 
 @WebServlet("/UserServlet")
 public class UserServlet extends HttpServlet {
@@ -24,7 +24,7 @@ public class UserServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String userId = request.getParameter("userId");
 		if (userId != null) {
-			User user = userFacade.getUserById(Integer.valueOf(userId));
+			UserData user = userFacade.getUserById(Integer.valueOf(userId));
 			System.out.println(user);
 		}
 	

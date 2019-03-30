@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import examplediploma.facades.UserFacade;
-import examplediploma.models.User;
+import examplediploma.models.UserData;
 
 @WebServlet("/signup")
 public class SignUp extends HttpServlet {
@@ -34,7 +34,7 @@ public class SignUp extends HttpServlet {
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		
-		User user = new User();
+		UserData user = new UserData();
 		user.setName(name);
 		user.setEmail(email);
 		if (userFacade.saveUser(user)) {

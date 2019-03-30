@@ -3,14 +3,14 @@ package examplediploma.models;
 import java.util.Date;
 import java.util.List;
 
-public class User {
+public class UserData {
 	
 	private int id;
 	private String name;
 	private String lastName;
 	private String email;
 	private Date dob;
-	private List<Tour> tours;
+	private List<TourData> tours;
 	
 	
 	public int getId() {
@@ -37,10 +37,10 @@ public class User {
 	public void setDob(Date dob) {
 		this.dob = dob;
 	}
-	public List<Tour> getTours() {
+	public List<TourData> getTours() {
 		return tours;
 	}
-	public void setTours(List<Tour> tours) {
+	public void setTours(List<TourData> tours) {
 		this.tours = tours;
 	}
 	

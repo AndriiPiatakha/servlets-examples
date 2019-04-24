@@ -9,7 +9,7 @@ public class UserFacade {
 	private UserDao userDao;
 	
 	{
-		userDao = new DefaultUserDao();
+		userDao = DefaultUserDao.getUserDaoInstance();
 	}
 	
 	// TODO Convert User to UserData object

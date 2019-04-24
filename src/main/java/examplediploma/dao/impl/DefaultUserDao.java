@@ -18,11 +18,21 @@ public class DefaultUserDao implements UserDao {
 	public static final String SELECT_USER_BY_ID_QUERY = "SELECT * FROM user WHERE user.id = ?";
 	public static final String INSERT_USER_WITH_NAME_ONLY = "INSERT INTO user (`name`) VALUES (?)";
 
+	private static DefaultUserDao instance;
 	private DataSource ds;
 	
+	private DefaultUserDao() {
+	}
 	
 	{
 		this.ds = DataSourceUtils.getDataSource();
+	}
+	
+	public static synchronized DefaultUserDao getUserDaoInstance() {
+		if (instance == null) {
+			instance = new DefaultUserDao();
+		}
+		return instance;
 	}
 
 	@Override

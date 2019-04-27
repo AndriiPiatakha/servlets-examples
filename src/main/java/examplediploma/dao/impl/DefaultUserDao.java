@@ -17,7 +17,8 @@ public class DefaultUserDao implements UserDao {
 	
 	public static final String SELECT_USER_BY_ID_QUERY = "SELECT * FROM user WHERE user.id = ?";
 	public static final String INSERT_USER_WITH_NAME_ONLY = "INSERT INTO user (`name`) VALUES (?)";
-
+	public static final String SELECT_USER_BY_EMAIL_PREPARED = "SELECT * FROM user WHERE email = ?";
+	
 	private static DefaultUserDao instance;
 	private DataSource ds;
 	
@@ -84,6 +85,29 @@ public class DefaultUserDao implements UserDao {
 			return false;
 		}
 		return true;
+	}
+
+	@Override
+	public UserData getUserByEmail(String email) {
+		UserData user = null;
+		try (Connection conn = ds.getConnection()) {
+			PreparedStatement pStatmenet = conn.prepareStatement(SELECT_USER_BY_EMAIL_PREPARED);
+			pStatmenet.setString(1, email);
+			ResultSet rs = pStatmenet.executeQuery();
+			if (rs.next()) {
+				user = new UserData();
+				user.setId(rs.getInt("id"));
+				user.setName(rs.getString("name"));
+				user.setLastName(rs.getString("last_name"));
+				user.setPassword(rs.getString("password"));
+				user.setEmail(rs.getString("email"));
+				user.setRole(rs.getString("role"));
+				return user;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return user;
 	}
 
 }

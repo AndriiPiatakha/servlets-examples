@@ -12,7 +12,6 @@ public class UserFacade {
 		userDao = DefaultUserDao.getUserDaoInstance();
 	}
 	
-	// TODO Convert User to UserData object
 	public UserData getUserById(int id) {
 		if (id > 0) {
 			return userDao.getUserById(id);

@@ -12,6 +12,7 @@ public class UserData {
 	private Date dob;
 	private List<TourData> tours;
 	private String password;
+	private String role;
 	
 	
 	public int getId() {
@@ -62,6 +63,13 @@ public class UserData {
 	@Override
 	public String toString() {
 		return "User [name=" + name + ", lastName=" + lastName + ", dob=" + dob + ", tours=" + tours + "]";
+	}
+	
+	public String getRole() {
+		return this.role;
+	}
+	public void setRole(String role) {
+		this.role = role;
 	}
 	
 

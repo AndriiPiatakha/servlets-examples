@@ -50,7 +50,6 @@ public class TestConnPool extends HttpServlet {
 	 */
 	public TestConnPool() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -76,7 +75,6 @@ public class TestConnPool extends HttpServlet {
 
 			
 		} catch (NamingException | SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

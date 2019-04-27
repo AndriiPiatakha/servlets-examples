@@ -40,19 +40,16 @@ public class DefaultProfessorDao implements ProfessorDao {
 
 	@Override
 	public List<Professor> getProfessorsByDay(String day) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public Professor getProfessorById() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public List<Professor> getProfessorsByTitle(String title) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

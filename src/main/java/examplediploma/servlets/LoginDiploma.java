@@ -27,7 +27,7 @@ public class LoginDiploma extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private UserDao userDao;
-	private UserService userService;
+	private UserService userService = DefaultUserService.getUserServiceInstance();
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
@@ -51,7 +51,6 @@ public class LoginDiploma extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		userDao = DefaultUserDao.getUserDaoInstance();
-		userService = DefaultUserService.getUserServiceInstance();
 		String email = request.getParameter(EMAIL_PARAMETER);
 		String password = request.getParameter(PASSWORD_PARAMETER);
 

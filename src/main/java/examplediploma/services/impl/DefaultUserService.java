@@ -13,7 +13,8 @@ public class DefaultUserService implements UserService {
 
 	@Override
 	public boolean isAdminUser(UserData user) {
-		if (user.getRole().equals(ADMIN_ROLE)) {
+		if (user != null && user.getRole() != null && 
+				user.getRole().equals(ADMIN_ROLE)) {
 			return true;
 		} else {
 			return false;

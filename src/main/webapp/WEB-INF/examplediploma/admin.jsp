@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<jsp:include page="logout.jsp" />
+
 Welcome in account ${loggedInUser.name }! You are our ADMIN!
 </body>
 </html>

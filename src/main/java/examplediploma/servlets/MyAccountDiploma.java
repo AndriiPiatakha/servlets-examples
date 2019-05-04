@@ -11,12 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/myaccount")
 public class MyAccountDiploma extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-
-    public MyAccountDiploma() {
-        super();
-    }
-
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/examplediploma/myaccount.jsp");

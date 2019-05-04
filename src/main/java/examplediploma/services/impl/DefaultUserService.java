@@ -5,6 +5,7 @@ import examplediploma.services.UserService;
 
 public class DefaultUserService implements UserService {
 	
+	private static final String ADMIN_ROLE = "ADMIN_ROLE";
 	private static UserService instance;
 	
 	private DefaultUserService() {
@@ -12,7 +13,7 @@ public class DefaultUserService implements UserService {
 
 	@Override
 	public boolean isAdminUser(UserData user) {
-		if (user.getRole().equals("ADMIN_ROLE")) {
+		if (user.getRole().equals(ADMIN_ROLE)) {
 			return true;
 		} else {
 			return false;

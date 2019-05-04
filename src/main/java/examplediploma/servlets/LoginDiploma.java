@@ -25,22 +25,36 @@ public class LoginDiploma extends HttpServlet {
 	public static final String EMAIL_PARAMETER = "email";
 
 	private static final long serialVersionUID = 1L;
-  
+
 	private UserDao userDao;
 	private UserService userService;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO case when user already logged in
-		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/examplediploma/login.jsp");
-		rd.forward(request, response);
+		HttpSession session = request.getSession(false);
+		if (session != null) {
+			UserData user = (UserData) session.getAttribute(LOGGED_IN_USER_ATTRIBUTE);
+			redirectUserByRole(response, user);
+		} else {
+			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/examplediploma/login.jsp");
+			rd.forward(request, response);
+		}
 	}
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	private void redirectUserByRole(HttpServletResponse response, UserData user) throws IOException {
+		if (userService.isAdminUser(user)) {
+			response.sendRedirect(getServletContext().getContextPath() + "/admin");
+		} else {
+			response.sendRedirect(getServletContext().getContextPath() + "/myaccount");
+		}
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		userDao = DefaultUserDao.getUserDaoInstance();
 		userService = DefaultUserService.getUserServiceInstance();
 		String email = request.getParameter(EMAIL_PARAMETER);
 		String password = request.getParameter(PASSWORD_PARAMETER);
-		
+
 		UserData user = userDao.getUserByEmail(email);
 		if (user != null) {
 			loginUser(request, response, password, user);
@@ -54,11 +68,7 @@ public class LoginDiploma extends HttpServlet {
 		if (user.getPassword() != null && user.getPassword().equals(password)) {
 			HttpSession session = request.getSession();
 			session.setAttribute(LOGGED_IN_USER_ATTRIBUTE, user);
-			if (userService.isAdminUser(user)) {
-				response.sendRedirect(getServletContext().getContextPath() + "/admin");
-			} else {
-				response.sendRedirect(getServletContext().getContextPath() + "/myaccount");
-			}
+			redirectUserByRole(response, user);
 		} else {
 			forwardBackToLoginWhenError(request, response);
 		}

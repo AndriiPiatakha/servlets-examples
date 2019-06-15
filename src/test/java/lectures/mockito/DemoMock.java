@@ -23,6 +23,7 @@ import java.util.List;
 
 import org.powermock.api.mockito.*;
 import org.hamcrest.core.AnyOf;
+import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
@@ -58,6 +59,11 @@ public class DemoMock {
 	
 //	@Rule
 //	public PowerMockRule pmRule;
+	
+	@Before
+	public void setUp() {
+		
+	}
 	
 	@Test
 	@Ignore

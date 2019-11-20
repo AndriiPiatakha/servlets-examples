@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 //@WebFilter(urlPatterns = ("/*"))
-public class CashFilter implements Filter {
+public class CacheFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {

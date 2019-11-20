@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 @WebServlet("/DemoJstl")
@@ -21,7 +22,8 @@ public class DemoJstl extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<String> namesList = new ArrayList<>(Arrays.asList("John", "Paul", "David"));
 		request.setAttribute("array", namesList);
-		
+		HttpSession session = request.getSession();
+		session.setAttribute("bean", "bean");
 		request.getRequestDispatcher("/demojstl.jsp").forward(request, response);
 	}
 

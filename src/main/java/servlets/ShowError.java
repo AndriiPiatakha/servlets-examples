@@ -2,7 +2,7 @@ package servlets;
 
 import java.io.*;
 
-import javax.jws.WebService;
+//import javax.jws.WebService;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;

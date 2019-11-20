@@ -37,7 +37,7 @@
   </servlet-mapping>
   <filter>
     <filter-name>NoCache</filter-name>
-    <filter-class>filters.CashFilter</filter-class>
+    <filter-class>filters.CacheFilter</filter-class>
   </filter>
   <filter>
     <filter-name>LogFilter</filter-name>

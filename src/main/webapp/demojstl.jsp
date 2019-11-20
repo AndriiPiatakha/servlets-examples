@@ -13,20 +13,21 @@
 </head>
 <body>
 <%! int i = 10; %>
-${session.getAttribute("bean").name }
+${bean }
 
+*******************
 <!--  -->
 <%-- --%>
 	<custom:hello a="2333"/>
 	<custom:printArray coll="${array}" />
 	<br />
-	<c:out value="${null} <hello> asda" default="default" escapeXml="true"></c:out>
+	<c:out value="${null} <html> asda" default="default" escapeXml="true"></c:out>
 	<br />
 	<ex:Hello message="message" coll="${array}"/>
 	<br />
 	
 	<%-- scopes: page, request, session, application --%>
-	<c:set var="salary" value="${2000*2}"/>
+	<c:set var="salary" value="${2000*2}" scope="request"/>
 	<c:out value="${salary}" />
 
 	<br />

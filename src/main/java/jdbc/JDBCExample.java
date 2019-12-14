@@ -5,6 +5,8 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public class JDBCExample {
+	
+	// TODO add try-with resources and closure of result sets and statements
 
 	private static final String JDBC_MYSQL_HOST = "jdbc:mysql://localhost:3306/";
 	private static final String MYSQL_JDBC_DRIVER_NAME = "com.mysql.cj.jdbc.Driver";

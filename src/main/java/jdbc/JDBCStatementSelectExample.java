@@ -13,6 +13,7 @@ public class JDBCStatementSelectExample {
 
 	private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
 	private static final String DB_CONNECTION = "jdbc:mysql://localhost:3306/sourceit";
+	private static final String PARAMS = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8";
 	private static final String DB_USER = "root";
 	private static final String DB_PASSWORD = "root";
 

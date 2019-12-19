@@ -1,10 +1,13 @@
 package examplediploma.groupacdc.models;
 
+import java.util.List;
+
 public class UserData {
 	
 	private int id;
 	private String firstName;
 	private boolean isBlocked;
+	private List<TourData> tours;
 	
 	public int getId() {
 		return id;
@@ -24,10 +27,22 @@ public class UserData {
 	public void setBlocked(boolean isBlocked) {
 		this.isBlocked = isBlocked;
 	}
+	
+	
+	
+	public List<TourData> getTours() {
+		return tours;
+	}
+	public void setTours(List<TourData> tours) {
+		this.tours = tours;
+	}
 	@Override
 	public String toString() {
-		return "UserData [id=" + id + ", firstName=" + firstName + ", isBlocked=" + isBlocked + "]";
+		return "UserData [id=" + id + ", firstName=" + firstName + ", isBlocked=" + isBlocked + ", tours=" + tours
+				+ "]";
 	}
+	
+	
 	
 	
 	

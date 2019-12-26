@@ -18,7 +18,9 @@ import examplediploma.groupacdc.models.UserData;
 public class DefaultUserDao implements UserDao {
 
 	private static final String SELECT_USER = "SELECT * FROM users WHERE id = ?";
-	private static final String GET_TOURS_FOR_USER = "SELECT t.id, t.tour_name, t.tour_price FROM tours t \r\n" + 
+	private static final String GET_TOURS_FOR_USER = 
+			"SELECT t.id, t.tour_name, "
+			+ "t.tour_price FROM tours t \r\n" + 
 			"JOIN orders o ON t.id = o.tour_id\r\n" + 
 			"WHERE o.user_id = ?;";
 	private static DefaultUserDao instance;

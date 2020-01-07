@@ -14,7 +14,15 @@ public class UserData {
 	private String password;
 	private String role;
 	
-	
+	public UserData(int id, String name, String lastName, String email) {
+		this.id = id;
+		this.name = name;
+		this.lastName = lastName;
+		this.email = email;
+	}
+
+	public UserData() {
+	}
 	public int getId() {
 		return id;
 	}

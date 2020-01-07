@@ -70,6 +70,8 @@ public class DefaultUserDao implements UserDao {
 //			users.add(user);
 //		}
 //		
+		users.add(new UserData(1, "a", "b", "a@a"));
+		users.add(new UserData(2, "a2", "b2", "a@a2"));
 		return users;
 	}
 

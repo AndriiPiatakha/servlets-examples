@@ -21,7 +21,7 @@ public class UserData {
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-	public boolean isBlocked() {
+	public boolean getIsBlocked() {
 		return isBlocked;
 	}
 	public void setBlocked(boolean isBlocked) {

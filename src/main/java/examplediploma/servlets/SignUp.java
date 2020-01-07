@@ -37,6 +37,7 @@ public class SignUp extends HttpServlet {
 		UserData user = new UserData();
 		user.setName(name);
 		user.setEmail(email);
+		// TODO add validation to validate name and email are not empty
 		if (userFacade.saveUser(user)) {
 			request.setAttribute("user", user);
 			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/views/success.jsp");

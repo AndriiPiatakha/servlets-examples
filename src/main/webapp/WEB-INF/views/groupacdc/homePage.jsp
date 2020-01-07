@@ -8,6 +8,12 @@
 </head>
 <body>
 
+	<div align="right">
+		<form action="logout3" method="get">
+			<input type="submit" value="Logout"/>
+		</form>
+	</div>
+
 	You are home, my lord.
 </body>
 </html>

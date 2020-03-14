@@ -4,7 +4,7 @@
 	http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>sourceitWeb</groupId>
-	<artifactId>sourceitWeb</artifactId>
+	<artifactId>servletsExamples</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
@@ -70,7 +70,7 @@
 		<dependency>
 		    <groupId>mysql</groupId>
 		    <artifactId>mysql-connector-java</artifactId>
-		    <version>8.0.12</version>
+		    <version>8.0.19</version>
 		</dependency>
 
 

@@ -12,9 +12,21 @@ import exampledimploma2.models.UserData;
 public class DefaultUserDao implements UserDao {
 	
 	private static final String SELECT_USER_BY_ID = "SELECT * FROM users WHERE id = ?";
-	private static final String URL = "jdbc:mysql://localhost:3306/group10_db?useUnicode=true&useJDBCCompliantTimezoneShift=true";
+	private static final String URL = "jdbc:mysql://localhost:3306/group10_db?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8";
 	private static final String USER = "root";
 	private static final String PASSWORD = "root";
+	
+	private static DefaultUserDao instance;
+	
+	private DefaultUserDao() {
+	}
+	
+	public static synchronized DefaultUserDao getInstance() {
+		if (instance == null) {
+			instance = new DefaultUserDao();
+		}
+		return instance;
+	}
 
 	@Override
 	public UserData getUserById(int id) {
@@ -40,8 +52,9 @@ public class DefaultUserDao implements UserDao {
 	
 	private Connection getConnection() {
 		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			return DriverManager.getConnection(URL, USER, PASSWORD);
-		} catch (SQLException e) {
+		} catch (SQLException | ClassNotFoundException e) {
 			throw new RuntimeException(e);
 		}
 	}

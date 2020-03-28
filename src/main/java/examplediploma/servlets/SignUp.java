@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import examplediploma.facades.UserFacade;
 import examplediploma.models.UserData;
 
-@WebServlet("/signup")
+@WebServlet("/public/signup")
 public class SignUp extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -24,13 +24,13 @@ public class SignUp extends HttpServlet {
 
   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher rs = request.getRequestDispatcher("WEB-INF/views/signup.jsp");
+		RequestDispatcher rs = request.getRequestDispatcher("/WEB-INF/views/signup.jsp");
 		rs.forward(request, response);
 	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("DO POST");
+		System.out.println("=========== DO POST");
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		
@@ -40,7 +40,7 @@ public class SignUp extends HttpServlet {
 		// TODO add validation to validate name and email are not empty
 		if (userFacade.saveUser(user)) {
 			request.setAttribute("user", user);
-			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/views/success.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/success.jsp");
 			rd.forward(request, response);
 		}
 		// TODO forward to error page

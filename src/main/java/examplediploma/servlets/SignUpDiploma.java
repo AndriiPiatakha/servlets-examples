@@ -14,7 +14,7 @@ import examplediploma.models.UserData;
 /**
  * Servlet implementation class SIgnUpDiploma
  */
-@WebServlet("/signUpDiploma")
+@WebServlet("/public/signUpDiploma")
 public class SignUpDiploma extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	

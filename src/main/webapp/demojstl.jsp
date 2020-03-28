@@ -18,6 +18,15 @@ ${bean }
 *******************
 <!--  -->
 <%-- --%>
+	<c:set var="testVar" value="1000" scope="session"/>
+	
+	<c:if test="${testVar1 != null}"> 	 	
+		<p>Test Var exist on the page</p>
+	</c:if>
+
+
+
+
 	<custom:hello a="2333"/>
 	<custom:printArray coll="${array}" />
 	<br />

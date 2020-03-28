@@ -27,11 +27,13 @@ public class HelloForm extends HttpServlet {
 		// Create cookies for first and last names.
 		Cookie firstName = new Cookie("first_name", request.getParameter("first_name"));
 		Cookie lastName = new Cookie("last_name", request.getParameter("last_name"));
+		Cookie partnerCode = new Cookie("partnerRef", request.getParameter("partnerRef"));
 		
 //		firstName.setMaxAge(0);
 		// Add both the cookies in the response header.
 		response.addCookie(firstName);
 		response.addCookie(lastName);
+		response.addCookie(partnerCode);
 
 		PrintWriter out = response.getWriter();
 		String title = "Using GET Method to Read Form Data";

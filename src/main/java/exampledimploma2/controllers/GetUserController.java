@@ -31,7 +31,7 @@ public class GetUserController extends HttpServlet {
 		request.getRequestDispatcher("WEB-INF/views/group_eagles/user.jsp")
 				.forward(request, response);
 		
-//		response.sendRedirect("/successLogin");
+//		response.sendRedirect(getServletContext().getContextPath() + "/successLogin?errMsg=some error");
 		
 	}
 	

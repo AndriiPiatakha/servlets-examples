@@ -31,7 +31,7 @@ public class LoginDiploma extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
-		if (session != null) {
+		if (session != null && session.getAttribute(LOGGED_IN_USER_ATTRIBUTE) != null) {
 			UserData user = (UserData) session.getAttribute(LOGGED_IN_USER_ATTRIBUTE);
 			redirectUserByRole(response, user);
 		} else {

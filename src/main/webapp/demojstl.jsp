@@ -235,5 +235,7 @@ ${bean }
       </c:if>
 	
 
+	<custom:footer/>
+
 </body>
 </html>

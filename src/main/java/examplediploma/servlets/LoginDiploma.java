@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -30,7 +31,11 @@ public class LoginDiploma extends HttpServlet {
 	private UserService userService = DefaultUserService.getUserServiceInstance();
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession(false);
+		HttpSession session = request.getSession();
+		Cookie cookie = new Cookie("JSESSIONID", session.getId());
+		cookie.setMaxAge(Integer.MAX_VALUE);
+		response.addCookie(cookie);
+		
 		if (session != null && session.getAttribute(LOGGED_IN_USER_ATTRIBUTE) != null) {
 			UserData user = (UserData) session.getAttribute(LOGGED_IN_USER_ATTRIBUTE);
 			redirectUserByRole(response, user);

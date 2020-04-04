@@ -26,6 +26,7 @@ public class UserServlet extends HttpServlet {
 		if (userId != null) {
 			UserData user = userFacade.getUserById(Integer.valueOf(userId));
 			System.out.println(user);
+			response.getWriter().println(user);
 		}
 	
 		response.getWriter().append("Served at: ").append(request.getContextPath());

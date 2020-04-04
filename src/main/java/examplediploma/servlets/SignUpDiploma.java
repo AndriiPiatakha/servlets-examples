@@ -16,9 +16,15 @@ import examplediploma.models.UserData;
  */
 @WebServlet("/public/signUpDiploma")
 public class SignUpDiploma extends HttpServlet {
+	private static final String RESOURCE_TO_REDIRECT = "/examplediploma/successSignUp.jsp";
+
 	private static final long serialVersionUID = 1L;
 	
 	private UserDao userDao;
+	
+	{
+		userDao = DefaultUserDao.getUserDaoInstance();
+	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		UserData userData = new UserData();
@@ -26,10 +32,15 @@ public class SignUpDiploma extends HttpServlet {
 		userData.setLastName(request.getParameter("last_name"));
 		userData.setPassword(request.getParameter("password"));
 		
-		userDao = DefaultUserDao.getUserDaoInstance();
+		// TODO validation
+		
 		userDao.saveUser(userData);
 		
-		response.sendRedirect(getServletContext().getContextPath() + "/examplediploma/successSignUp.jsp");
+		response.sendRedirect(getServletContext().getContextPath() + RESOURCE_TO_REDIRECT);
+	}
+
+	public void setUserDao(UserDao userDao) {
+		this.userDao = userDao;	
 	}
 
 }

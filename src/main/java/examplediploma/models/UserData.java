@@ -1,5 +1,6 @@
 package examplediploma.models;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -13,6 +14,7 @@ public class UserData {
 	private List<TourData> tours;
 	private String password;
 	private String role;
+	private BigDecimal money;
 	
 	public UserData(int id, String name, String lastName, String email) {
 		this.id = id;
@@ -78,6 +80,14 @@ public class UserData {
 	}
 	public void setRole(String role) {
 		this.role = role;
+	}
+
+	public BigDecimal getMoney() {
+		return this.money;
+	}
+
+	public void setMoney(BigDecimal money) {
+		this.money = money;
 	}
 	
 

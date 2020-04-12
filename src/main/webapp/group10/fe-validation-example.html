@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#form-button").click(function() {
+			var isFormValid = true;
+			
+			var someField = $("#someField").val();
+
+			if (someField.length < 5) {
+				isFormValid = false;
+			}
+			
+			if (isFormValid) {
+				$("#some-form").submit();
+			} else {
+				// show error
+			}
+			
+		});
+		
+	});
+
+</script>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<form id="some-form" action="../FirstServlet" method="GET">
+		<input id="someField" type="text" name="someField"/>
+		
+	</form>
+	<button id="form-button">Submit form</button>
+
+</body>
+</html>

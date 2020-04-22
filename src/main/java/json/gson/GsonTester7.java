@@ -21,8 +21,7 @@ public class GsonTester7 {
 		System.out.println("}");
 
 		// De-serialization
-		Type listType = new TypeToken<Collection<Integer>>() {
-		}.getType();
+		Type listType = new TypeToken<Collection<Integer>>(){}.getType();
 		marks = gson.fromJson("[100,90,85]", listType);
 		System.out.println("marks:" + marks);
 	}

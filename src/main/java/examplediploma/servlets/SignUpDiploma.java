@@ -28,9 +28,16 @@ public class SignUpDiploma extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		UserData userData = new UserData();
-		userData.setName(request.getParameter("first_name"));
-		userData.setLastName(request.getParameter("last_name"));
-		userData.setPassword(request.getParameter("password"));
+		
+		// Error handling added to demo specific test with Mockito
+		try {
+			userData.setName(request.getParameter("first_name"));
+			userData.setLastName(request.getParameter("last_name"));
+			userData.setPassword(request.getParameter("password"));
+		} catch (RuntimeException e) {
+			return;
+		}
+	
 		
 		// TODO validation
 		

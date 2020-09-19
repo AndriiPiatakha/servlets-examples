@@ -12,6 +12,15 @@ import org.hibernate.Transaction;
 import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
 
+
+/*
+ * 
+ * TODO: session.get vs session.load 
+ * session.update vs session.saveOrUpdate
+ * 
+ * 
+ */
+
 public class ManageEmployee {
 	private static SessionFactory factory;
 
@@ -141,11 +150,9 @@ public class ManageEmployee {
 
 	/* Method to CREATE an employee in the database */
 	public Integer addEmployee(String fname, String lname, int salary) {
-		Session session = factory.openSession();
 		Transaction tx = null;
 		Integer employeeID = null;
-
-		try {
+		try (Session session = factory.openSession()) {
 			tx = session.beginTransaction();
 			Employee employee = new Employee();
 			employee.setFirstName(fname);
@@ -157,22 +164,20 @@ public class ManageEmployee {
 			if (tx != null)
 				tx.rollback();
 			e.printStackTrace();
-		} finally {
-			session.close();
-		}
+		} 
 		return employeeID;
 	}
 
 	/* Method to READ all the employees */
 	public void listEmployees() {
-		Session session = factory.openSession();
+		
 		Transaction tx = null;
 
-		try {
+		try (Session session = factory.openSession()) {
 			tx = session.beginTransaction();
-			List employees = session.createQuery("FROM Employee").list();
-			for (Iterator iterator = employees.iterator(); iterator.hasNext();) {
-				Employee employee = (Employee) iterator.next();
+			List<Employee> employees = session.createQuery("FROM Employee").list();
+			for (Iterator<Employee> iterator = employees.iterator(); iterator.hasNext();) {
+				Employee employee = iterator.next();
 				System.out.print("First Name: " + employee.getFirstName());
 				System.out.print("  Last Name: " + employee.getLastName());
 				System.out.print("  Salary: " + employee.getSalary());
@@ -184,9 +189,7 @@ public class ManageEmployee {
 			if (tx != null)
 				tx.rollback();
 			e.printStackTrace();
-		} finally {
-			session.close();
-		}
+		} 
 	}
 
 	/* Method to UPDATE salary for an employee */

@@ -6,6 +6,7 @@ import com.google.gson.GsonBuilder;
 public class GsonTester {
 	public static void main(String[] args) {
 		String jsonString = "{\"name\":\"Mahesh\", \"age\":21}";
+		Gson gson2 = new Gson();
 
 		GsonBuilder builder = new GsonBuilder();
 		builder.setPrettyPrinting();

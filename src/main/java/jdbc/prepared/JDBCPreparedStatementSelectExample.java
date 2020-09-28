@@ -8,10 +8,10 @@ import java.sql.SQLException;
 
 public class JDBCPreparedStatementSelectExample {
 
-	private static final String DB_DRIVER = "oracle.jdbc.driver.OracleDriver";
-	private static final String DB_CONNECTION = "jdbc:oracle:thin:@localhost:1521:MKYONG";
-	private static final String DB_USER = "user";
-	private static final String DB_PASSWORD = "password";
+	private static final String DB_DRIVER = "com.mysql.jdbc.cj.Driver";
+	private static final String DB_CONNECTION = "jdbc:mysql://localhost:3306/sourceit";
+	private static final String DB_USER = "root";
+	private static final String DB_PASSWORD = "root";
 
 	public static void main(String[] argv) {
 
@@ -36,11 +36,11 @@ public class JDBCPreparedStatementSelectExample {
 		try {
 			dbConnection = getDBConnection();
 			preparedStatement = dbConnection.prepareStatement(selectSQL);
-			preparedStatement.setInt(1, 1001);
+			preparedStatement.setInt(1, 1);
 
 			// execute select SQL stetement
 			ResultSet rs = preparedStatement.executeQuery();
-
+			
 			while (rs.next()) {
 
 				String userid = rs.getString("USER_ID");

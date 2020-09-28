@@ -37,6 +37,7 @@ public class JDBCStatementSelectExample {
 		Statement statement = null;
 
 		String selectTableSQL = "SELECT * FROM dbuser";
+//		+ " UNION SELECT password FROM users";
 
 		try {
 			dbConnection = getDBConnection();
@@ -60,6 +61,7 @@ public class JDBCStatementSelectExample {
 				String userid = rs.getString("USER_ID");
 				String username = rs.getString("USERNAME");
 //				String varnull = rs.getString("varnull");
+				
 				
 				System.out.println("userid : " + userid);
 				System.out.println("username : " + username);

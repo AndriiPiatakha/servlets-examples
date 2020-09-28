@@ -20,6 +20,7 @@ public class Messenger {
     public void setMailServer(MailServer mailServer) {
         this.mailServer = mailServer;
     }
+    
     public void sendMessage(Client client, Template template) {
         String msgContent = templateEngine.prepareMessage(template, client);
         Email email = new Email();

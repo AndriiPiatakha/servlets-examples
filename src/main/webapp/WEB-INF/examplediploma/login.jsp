@@ -25,7 +25,7 @@
 			</tr>
 		</c:if>
 		<tr>
-			<td><input type="submit" value="Submit Form"/></td>
+			<td><input type="submit" value="Login"/></td>
 			<td><input type="reset" value="Clear Form"/></td>
 		</tr>
 	</table>

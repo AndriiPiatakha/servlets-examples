@@ -54,7 +54,7 @@ public class DemoMock {
 	@Mock
 //	(answer=Answers.RETURNS_DEEP_STUBS)
 //	@Spy
-	@InjectMocks
+//	@InjectMocks
 	private Car car;
 	
 //	@Rule
@@ -90,7 +90,7 @@ public class DemoMock {
 	}
 	
 	@Test
-	@Ignore
+//	@Ignore
 	public void shouldThrowNullPointerWithoutDeepStub() {
 //		car.startEngine();
 		Engine engine = car.getEngine();

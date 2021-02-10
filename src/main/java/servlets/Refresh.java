@@ -14,7 +14,7 @@ public class Refresh extends HttpServlet {
    public void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
    
-      // Set refresh, autoload time as 5 seconds
+      // Set refresh, autoload time as 2 seconds
       response.setIntHeader("Refresh", 2);
  
       // Set response content type

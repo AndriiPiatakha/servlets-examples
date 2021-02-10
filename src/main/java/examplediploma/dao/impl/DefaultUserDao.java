@@ -15,9 +15,9 @@ import examplediploma.models.UserData;
 
 public class DefaultUserDao implements UserDao {
 	
-	public static final String SELECT_USER_BY_ID_QUERY = "SELECT * FROM user WHERE user.id = ?";
-	public static final String INSERT_USER_WITH_NAME_ONLY = "INSERT INTO user (`name`) VALUES (?)";
-	public static final String SELECT_USER_BY_EMAIL_PREPARED = "SELECT * FROM user WHERE email = ?";
+	public static final String SELECT_USER_BY_ID_QUERY = "SELECT * FROM users WHERE user.id = ?";
+	public static final String INSERT_USER_WITH_NAME_ONLY = "INSERT INTO users (`name`) VALUES (?)";
+	public static final String SELECT_USER_BY_EMAIL_PREPARED = "SELECT * FROM users WHERE email = ?";
 	
 	private static DefaultUserDao instance;
 	private DataSource ds;
@@ -99,7 +99,7 @@ public class DefaultUserDao implements UserDao {
 			if (rs.next()) {
 				user = new UserData();
 				user.setId(rs.getInt("id"));
-				user.setName(rs.getString("name"));
+				user.setName(rs.getString("first_name"));
 				user.setLastName(rs.getString("last_name"));
 				user.setPassword(rs.getString("password"));
 				user.setEmail(rs.getString("email"));

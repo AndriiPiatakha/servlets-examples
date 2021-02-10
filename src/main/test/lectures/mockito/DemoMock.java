@@ -41,7 +41,7 @@ import org.powermock.modules.junit4.PowerMockRunner;
 
 @RunWith(MockitoJUnitRunner.class)
 //@RunWith(PowerMockRunner.class)
-//@PrepareForTest({String.class, Static.class})
+@PrepareForTest({String.class, Static.class})
 public class DemoMock {
 	
 	@Mock

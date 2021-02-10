@@ -35,6 +35,6 @@
             username="root" 
             password="root" 
             driverClassName="com.mysql.jdbc.Driver"
-            url="jdbc:mysql://localhost:3306/sourceit?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=GMT%2B8"/>
+            url="jdbc:mysql://localhost:3306/online_shop"/>
 
 </Context>

@@ -1,6 +1,7 @@
 package examplediploma.servlets;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -30,32 +31,35 @@ public class LoginDiploma extends HttpServlet {
 	private UserDao userDao;
 	private UserService userService = DefaultUserService.getUserServiceInstance();
 
+	{
+		userDao = DefaultUserDao.getUserDaoInstance();
+	}
+	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
+		
+		Cookie[] cookies = request.getCookies();
+		for (Cookie cookie : cookies) {
+			System.out.println(cookie.getName() + "\t" + cookie.getValue());
+		}
+		
 		Cookie cookie = new Cookie("JSESSIONID", session.getId());
 		cookie.setMaxAge(Integer.MAX_VALUE);
 		response.addCookie(cookie);
 		
 		if (session != null && session.getAttribute(LOGGED_IN_USER_ATTRIBUTE) != null) {
 			UserData user = (UserData) session.getAttribute(LOGGED_IN_USER_ATTRIBUTE);
-			redirectUserByRole(response, user);
+			redirectUserByRole(request, response, user);
 		} else {
 			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/examplediploma/login.jsp");
 			rd.forward(request, response);
 		}
 	}
 
-	private void redirectUserByRole(HttpServletResponse response, UserData user) throws IOException {
-		if (userService.isAdminUser(user)) {
-			response.sendRedirect(getServletContext().getContextPath() + "/admin");
-		} else {
-			response.sendRedirect(getServletContext().getContextPath() + "/myaccount");
-		}
-	}
+	
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		userDao = DefaultUserDao.getUserDaoInstance();
 		String email = request.getParameter(EMAIL_PARAMETER);
 		String password = request.getParameter(PASSWORD_PARAMETER);
 
@@ -72,9 +76,17 @@ public class LoginDiploma extends HttpServlet {
 		if (user.getPassword() != null && user.getPassword().equals(password)) {
 			HttpSession session = request.getSession();
 			session.setAttribute(LOGGED_IN_USER_ATTRIBUTE, user);
-			redirectUserByRole(response, user);
+			redirectUserByRole(request, response, user);
 		} else {
 			forwardBackToLoginWhenError(request, response);
+		}
+	}
+	
+	private void redirectUserByRole(HttpServletRequest request, HttpServletResponse response, UserData user) throws IOException {
+		if (userService.isAdminUser(user)) {
+			response.sendRedirect(getServletContext().getContextPath() + "/admin");
+		} else {
+			response.sendRedirect(getServletContext().getContextPath() + "/myaccount");
 		}
 	}
 

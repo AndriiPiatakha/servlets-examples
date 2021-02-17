@@ -15,6 +15,7 @@ public class LogFilter implements Filter {
 
 		// Print the init parameter
 		System.out.println("Test Param: " + testParam);
+		config.getServletContext().getContextPath();
 	}
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)

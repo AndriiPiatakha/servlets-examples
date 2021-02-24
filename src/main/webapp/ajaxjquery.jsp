@@ -7,8 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>jQuery, Ajax and Servlet/JSP integration example</title>
 
-<script src="http://code.jquery.com/jquery-1.10.2.js"
-	type="text/javascript"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="resources/js/app-ajax.js" type="text/javascript"></script>
 <script src="resources/js/jquery-3.3.1.js" type="text/javascript"></script>
 </head>

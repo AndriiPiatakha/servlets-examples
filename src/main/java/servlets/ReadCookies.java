@@ -45,5 +45,8 @@ public class ReadCookies extends HttpServlet {
 		out.println("</body>");
 		out.println("</html>");
 		
+		
+//		cookies[0].setMaxAge(0);
+//		response.addCookie(cookies[0]);
 	}
 }

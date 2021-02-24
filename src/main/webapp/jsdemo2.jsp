@@ -15,7 +15,7 @@
 	Hello )
 	<script type="text/javascript">
 		function switchHtml() {
-			//debugger;
+			debugger;
 			console.log("here");
 			document.getElementById('demo2').innerHTML = 'Hello JavaScript';
 			document.getElementById('demo2').style.fontSize = '35px';
@@ -98,8 +98,11 @@
 				+ '{ "firstName":"John" , "lastName":"Doe" },'
 				+ '{ "firstName":"Anna" , "lastName":"Smith" },'
 				+ '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
-
+		
+		//text.firstName
+		
 		var obj = JSON.parse(text);
+		//obj.firstName
 		
 		var myObj = { "name":"John", "age":31, "city":"New York" };
 		var myJSON = JSON.stringify(myObj);

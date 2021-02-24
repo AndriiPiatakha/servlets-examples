@@ -12,13 +12,15 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebFilter("/public/*")
+@WebFilter("/*")
 public class PartnerFilter implements Filter {
 
+	private static final String PARTNER_ID = "partnerId";
+
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		String parameter = request.getParameter("partnerId");
+		String parameter = request.getParameter(PARTNER_ID);
 		if (parameter != null) {
-			Cookie cookie = new Cookie("partnerId", parameter);
+			Cookie cookie = new Cookie(PARTNER_ID, parameter);
 			((HttpServletResponse) response).addCookie(cookie);
 		}
 		chain.doFilter(request, response);

@@ -97,4 +97,10 @@ public class LoginDiploma extends HttpServlet {
 		rd.forward(request, response);
 	}
 
+
+
+	public void setUserDao(UserDao userDao) {
+		this.userDao = userDao;
+	}
+
 }

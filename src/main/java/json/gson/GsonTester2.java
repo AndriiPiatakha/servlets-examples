@@ -28,8 +28,10 @@ public class GsonTester2 {
       } 
    } 
    private void writeJSON(Student2 student) throws IOException { 
-      GsonBuilder builder = new GsonBuilder(); 
-      Gson gson = builder.create(); 
+//      GsonBuilder builder = new GsonBuilder(); 
+//      Gson gson = builder.create(); 
+	   
+	  var gson = new Gson();
       FileWriter writer = new FileWriter("student.json");   
       writer.write(gson.toJson(student));   
       writer.close(); 

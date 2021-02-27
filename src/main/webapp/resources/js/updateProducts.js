@@ -37,7 +37,7 @@ $(document).ready(function() {
 				success : function(responseText) {
 					console.log(responseText);
 				},
-				error : function() {
+				error : function(response) {
 					console.log('error');
 				} 
 			});

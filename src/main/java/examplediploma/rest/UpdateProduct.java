@@ -19,6 +19,15 @@ public class UpdateProduct extends HttpServlet {
 		System.out.println(req.getParameter("priceValue"));
 		
 		resp.getWriter().write("success");
+		
+		// in case of error
+		/*
+		 * get by ID original state - 
+		 * Convert to JSON (GSON Library) 
+		 * 
+		 */
+		
+		resp.sendError(500, "json");
 	}
 
 	
